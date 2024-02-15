@@ -12,48 +12,47 @@ body, html {
     */
   .wrapper{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 10px solid #e30707;
-    width: 80%;
-    height: 80%;
+    /* border: 10px solid #e30707; */
+    width: 90%;
   }
   .flashcard-container
   {
-    width: 80%; /* Adjust based on preference */
-    height: 80%; /* Adjust based on preference */
-    max-width: 1054px; /* Prevents it from becoming too large */
-    max-height: 1054px; /* Adjust based on your content */
+    width: 712px; /* Prevents it from becoming too large */
+    height: 712px; /* Adjust based on your content */
     display: flex;
-    border: #444;
-    border-width: 4px;
   }
   .flashcard {
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Prevents it from becoming too large */
+    height: 100%; /* Adjust based on your content */
     position: relative;
+    transition: transform 0.8s;
   }
 
   .front, .back {
     backface-visibility: hidden;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    border: 10px solid #1e1d1d; /* Optional, for styling */
     width: 100%;
     height: 100%;
-    max-width: 100%;
-    max-height: 100%;
     position: absolute;
     background-size: cover;
     background-position: center;
+    border-radius: 10px; /* Rounded corners for a fancy look */
+
+    background-color: #fff;
+    border: 2px solid #59616a; /* Solid blue border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
 
-  .front {
-    background-color: #fff;
+  .flashcard:hover {
+    /* scale by 1.05 */
+    transform: scale(1.05);
   }
 
   .back {
-    background-color: #fff;
     transform: rotateY(180deg);
   }
 
@@ -76,34 +75,34 @@ body, html {
   }
 
   .flashcard-title {
+    display: flex;
+    justify-content: center;
     font-family: 'Almendra SC', serif;
     font-size: 3.5em; /* Large font for the verb */
-    text-align: center;
     color: #333; /* Title text color */
     font-weight: bold; /* Title font weight */
     z-index: 10; /* Ensure title is always visible */
+    margin-top: 165px;
+    margin-bottom: 0;
   }
 
-  #sentence {
-    font-family: 'IM Fell English SC', serif;
-    font-size: 1.5em; /* Smaller font for the sentence */
-    width: 100%;
-    text-align: center;
-    color: #444;
-}
 
 .flashcard-header {
+    color: #444;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-family: 'IM Fell English SC', serif;
     font-size: 28px; /* Adjust size as needed */
-    color: #333; /* Or any color that is visible on your background */
-    z-index: 10;
-    text-align: center;
-    margin-top: 20%;
+    margin-top:0;
+    margin-bottom: 0;
   }
 
   .flashcard-list {
-    text-align: center;
-    margin-top: 20px; /* Space between the header and the list */
+    display:flex;
+    justify-content: center;
+    font-family: 'IM Fell English SC', serif;
+    color: #444;
     font-size: 20px; /* Adjust size as needed */
-    list-style-position:inside ; /* To ensure bullets are aligned in center */
-    z-index: 10;
+    font-weight: bold;
   }

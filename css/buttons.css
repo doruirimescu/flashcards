@@ -1,17 +1,21 @@
-#nextButton {
-    position: absolute;
-    bottom: 30px;
-    right:30px;
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
+button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    font-size: 20px; /* Increase font size */
+    transition: background-color 0.3s ease; /* Smooth background color change on hover */
+    position: relative;
+    width: 150px;
+    margin: 0 10px;
   }
 
-  #previousButton {
-    position: absolute;
-    left: 30px;
-    bottom: 30px;
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
+  button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+  }
+
+  button:active {
+    background-color: #004099; /* Even darker shade of blue when active/clicked */
   }

@@ -3,7 +3,7 @@ const flashcards = [
     {
       title: 'SULAA (2)',
       frontImage: 'image17.png',
-      backImage: 'image201.png',
+      backImage: 'assets/back/image41.png',
       content: `
     <div class="flashcard-header">
         <h2>Aurinko sulaa lumen</h2>
@@ -16,15 +16,20 @@ const flashcards = [
     </div>`
     },
     {
-      title: 'Aurinko sulattaa lumen',
+      title: 'SULATTAA (2)',
       frontImage: 'a2.png',
-      backImage: 'backImage2.jpg',
+      backImage: 'assets/back/image29.png',
       content: `
-      <h2 class="flashcard-header">Header 2</h2>
-      <ol class="flashcard-list">
-        <li>First</li>
-        <li>Second</li>
-    </ol>`
+      <div class="flashcard-header">
+        <h2>Aurinko sulaa lumen.</h2>
+      </div>
+      <div class="flashcard-list">
+        <ol>
+            <li>Sulattaa + obj</li>
+            <li>Second</li>
+        </ol>
+    </div>
+    `
     },
   // Add more flashcards as needed
 ];
