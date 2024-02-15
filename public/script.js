@@ -17,8 +17,8 @@ if (IS_RUNNING_ON_LOCAL === true) {
     .catch(error => console.error('Error fetching flashcards:', error));
 }
 else{
-    /* Fetch from github master */
-    fetch(`https://raw.githubusercontent.com/doruirimescu/language-flashcards/master/public/data/${type}.json`)
+    /* Fetch from github branch. See config.js */
+    fetch(`${GITHUB_FETCH_URL}${type}.json`)
     .then(response => response.json())
     .then(data => {
         console.log(data);
