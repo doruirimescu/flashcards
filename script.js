@@ -1,7 +1,7 @@
 let currentFlashcardIndex = 0;
 const flashcards = [
     {
-      title: 'SULAA (2)',
+      title: 'SULAA (1)',
       frontImage: 'assets/front/sulaa.png',
       backImage: 'assets/back/image41.png',
       frontContent:"The snow melts when the sun is shining",
@@ -13,9 +13,9 @@ const flashcards = [
       ]
     },
     {
-      title: 'SULATTAA (2)',
+      title: 'SULATTAA (1)',
       frontImage: 'assets/front/sulattaa.png',
-      backImage: 'assets/back/image29.png',
+      backImage: 'assets/back/image41.png',
       frontContent:"The sun melts the snow",
       sentence: "Aurinko sulttaa lumen.",
       listContent:[
@@ -23,6 +23,30 @@ const flashcards = [
         "<a href='https://www.verbix.com/webverbix/finnish/sulttaa'>Verbix</a>"
       ]
     },
+    {
+        title: 'PYÖRITTÄÄ (1)',
+        frontImage: 'assets/front/pyörittää.png',
+        backImage: 'assets/back/image41.png',
+        frontContent:"When a child rolls a snowball, it grows big",
+        sentence: "Kun lapsi pyörittää lumipalloa, se kasvaa suureksi.",
+        listContent:[
+          "Pyörittää + obj",
+          "suuri -> suure/n -> suureksi",
+          "<a href='https://www.verbix.com/webverbix/finnish/sulttaa'>Verbix</a>"
+        ]
+      },
+      {
+        title: 'HIERTÄÄ (1)',
+        frontImage: 'assets/front/hiertää.png',
+        backImage: 'assets/back/image41.png',
+        frontContent:"The shoe is chafing me",
+        sentence: "Kenkä hiertää minua.",
+        listContent:[
+          "Hiertää + P",
+          "hierrän / hiersin / olen hiertänyt / olin hiertänyt / hierrettäisiin, ei hierrettäisi",
+          "<a href='https://www.verbix.com/webverbix/finnish/hiertaa'>Verbix</a>"
+        ]
+      },
 ];
 
 function updateStats(currentIndex, totalCards) {
@@ -61,8 +85,11 @@ function displayFlashcard(index) {
 displayFlashcard(currentFlashcardIndex);
 
 document.getElementById('nextButton').addEventListener('click', () => {
-    currentFlashcardIndex = (currentFlashcardIndex + 1) % flashcards.length; // Loop back to the first card after the last
-
+    currentFlashcardIndex = (currentFlashcardIndex + 1); // Loop back to the first card after the last
+    if (currentFlashcardIndex >= flashcards.length)
+    {
+        currentFlashcardIndex = flashcards.length - 1;
+    }
     displayFlashcard(currentFlashcardIndex);
   });
 
