@@ -1,0 +1,109 @@
+body, html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Why are the buttons not displayed inside the wrapper?
+    */
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #e30707;
+    width: 80%;
+    height: 80%;
+  }
+  .flashcard-container
+  {
+    width: 80%; /* Adjust based on preference */
+    height: 80%; /* Adjust based on preference */
+    max-width: 1054px; /* Prevents it from becoming too large */
+    max-height: 1054px; /* Adjust based on your content */
+    display: flex;
+    border: #444;
+    border-width: 4px;
+  }
+  .flashcard {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .front, .back {
+    backface-visibility: hidden;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border: 10px solid #1e1d1d; /* Optional, for styling */
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .front {
+    background-color: #fff;
+  }
+
+  .back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+  }
+
+  .flashcard.flipped .front {
+    transform: rotateY(180deg);
+  }
+
+  .flashcard.flipped .back {
+    transform: rotateY(360deg);
+  }
+
+  .back-content {
+    z-index: 2;
+    /* Align your text as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: normal;
+  }
+
+  .flashcard-title {
+    font-family: 'Almendra SC', serif;
+    font-size: 3.5em; /* Large font for the verb */
+    text-align: center;
+    color: #333; /* Title text color */
+    font-weight: bold; /* Title font weight */
+    z-index: 10; /* Ensure title is always visible */
+  }
+
+  #sentence {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.5em; /* Smaller font for the sentence */
+    width: 100%;
+    text-align: center;
+    color: #444;
+}
+
+.flashcard-header {
+    font-size: 28px; /* Adjust size as needed */
+    color: #333; /* Or any color that is visible on your background */
+    z-index: 10;
+    text-align: center;
+    margin-top: 20%;
+  }
+
+  .flashcard-list {
+    text-align: center;
+    margin-top: 20px; /* Space between the header and the list */
+    font-size: 20px; /* Adjust size as needed */
+    list-style-position:inside ; /* To ensure bullets are aligned in center */
+    z-index: 10;
+  }
