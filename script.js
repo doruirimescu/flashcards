@@ -1,9 +1,29 @@
 let currentFlashcardIndex = 0;
-var flashcards;
-var json = $.getJSON("test.json", function(json) {
-    flashcards = json.flashcards;
-    console.log(flashcards); // this will show the info it in firebug console
-
+const flashcards = [
+    {
+      title: 'SULAA (2)',
+      frontImage: 'assets/front/sulaa.png',
+      backImage: 'assets/back/image41.png',
+      frontContent:"The snow melts when the sun is shining",
+      sentence: "Lumi sulaa, kun aurinko paistaa.",
+      listContent:[
+        "sulan / sulin / olen sulanut / olin sulanut",
+        "sulaisin / olisin sulanut / sulettaisiin, ei sulettaisi",
+        "<a href='https://www.verbix.com/webverbix/finnish/sulaa'>Verbix</a>"
+      ]
+    },
+    {
+      title: 'SULATTAA (2)',
+      frontImage: 'assets/front/sulattaa.png',
+      backImage: 'assets/back/image29.png',
+      frontContent:"The sun melts the snow",
+      sentence: "Aurinko sulttaa lumen.",
+      listContent:[
+        "Sulattaa + obj",
+        "<a href='https://www.verbix.com/webverbix/finnish/sulttaa'>Verbix</a>"
+      ]
+    },
+];
 
 function updateStats(currentIndex, totalCards) {
     const percentage = (currentIndex / totalCards) * 100;
@@ -55,5 +75,4 @@ document.getElementById('previousButton').addEventListener('click', () => {
         currentFlashcardIndex = 0;
     }
     displayFlashcard(currentFlashcardIndex);
-});
 });
