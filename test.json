@@ -1,0 +1,27 @@
+{
+    "flashcards": [
+        {
+        "title": "SULAA (2)",
+        "frontImage": "image17.png",
+        "backImage": "assets/back/image41.png",
+        "frontContent": "The snow melts when the sun is shining",
+        "sentence": "Lumi sulaa, kun aurinko paistaa.",
+        "listContent": [
+            "sulan / sulin / olen sulanut / olin sulanut",
+            "sulaisin / olisin sulanut / sulettaisiin, ei sulettaisi",
+            "<a href='https://www.verbix.com/webverbix/finnish/sulaa'>Verbix</a>"
+        ]
+        },
+        {
+        "title": "SULATTAA (2)",
+        "frontImage": "a2.png",
+        "backImage": "assets/back/image29.png",
+        "frontContent": "The sun melts the snow",
+        "sentence": "Aurinko sulttaa lumen.",
+        "listContent": [
+            "Sulattaa + obj",
+            "<a href='https://www.verbix.com/webverbix/finnish/sulttaa'>Verbix</a>"
+        ]
+        }
+    ]
+}

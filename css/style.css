@@ -18,36 +18,31 @@ body, html {
     width: 90%;
   }
 
-  .flashcard-container
-  {
+
+  .flashcard-container {
     margin-top: 50px;
     width: 712px; /* Prevents it from becoming too large */
     height: 712px; /* Adjust based on your content */
     display: flex;
+    position: relative;
+    transition: transform 0.8s;
     cursor: pointer;
   }
 
-  .flashcard {
-    width: 100%; /* Prevents it from becoming too large */
-    height: 100%; /* Adjust based on your content */
-    position: relative;
-    transition: transform 0.8s;
-  }
-
-  .flashcard.flipped .front:hover::after {
+  .flashcard-container.flipped .front:hover::after {
     visibility: hidden;
     opacity: 0;
 }
 
-  .flashcard:hover {
+  .flashcard-container:hover {
     transform: scale(1.05);
   }
 
-  .flashcard.flipped .front {
+  .flashcard-container.flipped .front {
     transform: rotateY(180deg);
   }
 
-  .flashcard.flipped .back {
+  .flashcard-container.flipped .back {
     transform: rotateY(360deg);
   }
 

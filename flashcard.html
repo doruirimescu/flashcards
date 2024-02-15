@@ -8,13 +8,15 @@
 <link href="css/menu.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="css/stats.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 
 <title>Flashcard App</title>
 </head>
 <body>
 
 <div class="wrapper">
-    <div id="flashcardContainer" class="flashcard-container">
+    <div id="flashcardContainer" class="flashcard-container" onclick="this.classList.toggle('flipped')">
     </div>
     <div class="menu">
         <button id="previousButton" class="button">Previous</button>
