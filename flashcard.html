@@ -7,6 +7,8 @@
 <link href="css/buttons.css" rel="stylesheet">
 <link href="css/menu.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link href="css/stats.css" rel="stylesheet">
+
 <title>Flashcard App</title>
 </head>
 <body>
@@ -18,8 +20,16 @@
         <button id="previousButton" class="button">Previous</button>
         <button id="nextButton" class="button">Next</button>
     </div>
+    <div class="stats">
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 0%;"></div>
+        </div>
+        <p id="cardStats">Cards visited: 0 / 0</p>
+    </div>
 </div>
 
+<script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>

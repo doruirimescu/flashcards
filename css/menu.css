@@ -1,6 +1,6 @@
 .menu {
     text-align: center; /* Center the buttons horizontally */
-    margin-top: 20px; /* Adjust the space between the flashcard container and the menu */
+    margin-top: 30px; /* Adjust the space between the flashcard container and the menu */
     width: 100%; /* Ensure the menu takes the full width to properly center its content */
     /* border: solid blue; */
     border-width: 5px;

@@ -6,10 +6,10 @@ body, html {
     background-color: #f0f0f0;
     height: 100%;
     width: 100%;
+    background-color: #f0f0f0; /* Light grey background for a minimalist look */
+    color: #333; /* Dark grey color for text */
   }
 
-  /* Why are the buttons not displayed inside the wrapper?
-    */
   .wrapper{
     display: flex;
     flex-direction: column;
@@ -18,12 +18,14 @@ body, html {
     /* border: 10px solid #e30707; */
     width: 90%;
   }
+
   .flashcard-container
   {
     width: 712px; /* Prevents it from becoming too large */
     height: 712px; /* Adjust based on your content */
     display: flex;
   }
+
   .flashcard {
     width: 100%; /* Prevents it from becoming too large */
     height: 100%; /* Adjust based on your content */
@@ -47,8 +49,31 @@ body, html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
 
+  .front::after {
+    content: var(--bubble-content, ''); /* Use a CSS variable, default to empty */
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    transition: opacity 0.3s, visibility 0.3s;
+    display: inline-flex; /* Adjusted to inline-flex to wrap content */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .front:hover::after {
+    visibility: visible;
+    opacity: .8;
+  }
   .flashcard:hover {
-    /* scale by 1.05 */
     transform: scale(1.05);
   }
 

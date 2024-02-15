@@ -1,0 +1,19 @@
+.stats {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.progress-bar-container {
+    width: 80%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 8px;
+    transition: width 0.4s ease-in-out;
+}
