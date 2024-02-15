@@ -6,7 +6,7 @@ const flashcards = [
       backImage: 'assets/back/image41.png',
       content: `
     <div class="flashcard-header">
-        <h2>Aurinko sulaa lumen</h2>
+        <h2>Lumi sulaa, kun aurinko paistaa.</h2>
     </div>
     <div class="flashcard-list">
         <ol>
@@ -21,7 +21,7 @@ const flashcards = [
       backImage: 'assets/back/image29.png',
       content: `
       <div class="flashcard-header">
-        <h2>Aurinko sulaa lumen.</h2>
+        <h2>Aurinko sulttaa lumen.</h2>
       </div>
       <div class="flashcard-list">
         <ol>
@@ -42,7 +42,7 @@ function displayFlashcard(index) {
       <div class="front" id="front_flash">
       </div>
       <div class="back" id="back_flash">
-            <div class="back-content">
+        <div class="back-content">
             <h2 class="flashcard-title">${flashcard.title}</h2>
             ${flashcard.content}
             <!-- Render HTML content -->
