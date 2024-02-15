@@ -6,7 +6,6 @@ body, html {
     background-color: #f0f0f0;
     height: 100%;
     width: 100%;
-    background-color: #f0f0f0; /* Light grey background for a minimalist look */
     color: #333; /* Dark grey color for text */
   }
 
@@ -21,9 +20,11 @@ body, html {
 
   .flashcard-container
   {
+    margin-top: 50px;
     width: 712px; /* Prevents it from becoming too large */
     height: 712px; /* Adjust based on your content */
     display: flex;
+    cursor: pointer;
   }
 
   .flashcard {
@@ -31,6 +32,23 @@ body, html {
     height: 100%; /* Adjust based on your content */
     position: relative;
     transition: transform 0.8s;
+  }
+
+  .flashcard.flipped .front:hover::after {
+    visibility: hidden;
+    opacity: 0;
+}
+
+  .flashcard:hover {
+    transform: scale(1.05);
+  }
+
+  .flashcard.flipped .front {
+    transform: rotateY(180deg);
+  }
+
+  .flashcard.flipped .back {
+    transform: rotateY(360deg);
   }
 
   .front, .back {
@@ -53,7 +71,7 @@ body, html {
     content: var(--bubble-content, ''); /* Use a CSS variable, default to empty */
     position: absolute;
     left: 50%;
-    top: 10%;
+    top: -0%;
     transform: translate(-50%, -50%);
     visibility: hidden;
     opacity: 0;
@@ -67,26 +85,18 @@ body, html {
     display: inline-flex; /* Adjusted to inline-flex to wrap content */
     align-items: center;
     justify-content: center;
+    font-family: 'IM Fell English SC', serif;
+    font-weight: bold;
+    font-size: large;
   }
 
   .front:hover::after {
     visibility: visible;
-    opacity: .8;
-  }
-  .flashcard:hover {
-    transform: scale(1.05);
+    opacity: .9;
   }
 
   .back {
     transform: rotateY(180deg);
-  }
-
-  .flashcard.flipped .front {
-    transform: rotateY(180deg);
-  }
-
-  .flashcard.flipped .back {
-    transform: rotateY(360deg);
   }
 
   .back-content {

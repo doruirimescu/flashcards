@@ -1,6 +1,8 @@
 .stats {
     margin-top: 20px;
     text-align: center;
+    font-family: 'IM Fell English SC', serif;
+    font-weight: bold;
 }
 
 .progress-bar-container {
