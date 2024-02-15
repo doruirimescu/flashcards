@@ -1,9 +1,0 @@
-flashcards:
-  - title: HÄKKI
-    frontImage: assets/front/häkä.png
-    backImage: assets/back/image41.png
-    frontContent: A strange bird sits in a cage hanging from an old tree's branch.
-    sentence: Kummallinen lintu istuu häkässä, joka roikkuu vanhan puun oksalla.
-    listContent:
-      - genetiivi häkin
-      - "<a href='https://fi.wiktionary.org/wiki/h%C3%A4kki'>wiktionary</a>"
