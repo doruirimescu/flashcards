@@ -17,8 +17,15 @@ if (IS_RUNNING_ON_LOCAL === true) {
     .catch(error => console.error('Error fetching flashcards:', error));
 }
 else{
-    /* Fetch from github main */
-
+    /* Fetch from github master */
+    fetch(`http://raw.githubusercontent.com/doruirimescu/language-flashcards/master/public/data/${type}.json`)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        flashcards = data.flashcards;
+        displayFlashcard(currentFlashcardIndex);
+    })
+    .catch(error => console.error('Error fetching flashcards:', error));
 }
 
 let currentFlashcardIndex = 0;

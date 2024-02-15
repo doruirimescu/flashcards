@@ -16,7 +16,7 @@ app.get('/flashcards', (req, res) => {
   try {
     const type = req.query.type;
     /* if type is verbs, load flashcard-verbs.yaml */
-    const fileContents = fs.readFileSync(path.join(__dirname, `/public/data/${type}.yaml`), 'utf8');
+    const fileContents = fs.readFileSync(path.join(__dirname, `/public/data/${type}.json`), 'utf8');
     const data = yaml.load(fileContents);
     res.json(data);
   } catch (e) {

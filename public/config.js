@@ -1,1 +1,1 @@
-var IS_RUNNING_ON_LOCAL = true;
+var IS_RUNNING_ON_LOCAL = false;
