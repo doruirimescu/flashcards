@@ -1,0 +1,16 @@
+{
+    "flashcards": [
+      {
+        "title": "Kohtelias",
+        "frontImage": "assets/front/kohtelias.png",
+        "backImage": "assets/back/image41.png",
+        "frontContent": "A polite knight opens the door for an elderly lady.",
+        "sentence": "Kohtelias ritari avaa oven vanhalle naiselle.",
+        "listContent": [
+          "komparatiivi kohteliaampi",
+          "superlatiivi kohteliain",
+          "<a href='https://fi.wiktionary.org/wiki/kohtelias'>wiktionary</a>"
+        ]
+      }
+    ]
+  }
