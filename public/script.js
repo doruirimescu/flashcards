@@ -3,16 +3,23 @@ const params = new URLSearchParams(window.location.search);
 const type = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
 
 console.log('type:', type);
+console.log("IS RUNNING LOCAL:", IS_RUNNING_ON_LOCAL);
 
-fetch(`http://localhost:3001/flashcards?type=${type}`)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    flashcards = data.flashcards; // Assuming the YAML is parsed into an object with a 'flashcards' property
-    // Initialize with the first flashcard
-    displayFlashcard(currentFlashcardIndex);
-  })
-  .catch(error => console.error('Error fetching flashcards:', error));
+if (IS_RUNNING_ON_LOCAL === true) {
+    /* Fetch from local server */
+    fetch(`http://localhost:3001/flashcards?type=${type}`)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        flashcards = data.flashcards;
+        displayFlashcard(currentFlashcardIndex);
+    })
+    .catch(error => console.error('Error fetching flashcards:', error));
+}
+else{
+    /* Fetch from github main */
+
+}
 
 let currentFlashcardIndex = 0;
 

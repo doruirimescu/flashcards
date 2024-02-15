@@ -61,7 +61,7 @@
     justify-content: center;
     font-family: 'IM Fell English SC', serif;
     font-weight: bold;
-    font-size: large;
+    font-size: 90;
   }
 
   .front:hover::after {
