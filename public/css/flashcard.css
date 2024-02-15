@@ -1,25 +1,4 @@
-body, html {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    height: 100%;
-    width: 100%;
-    color: #333; /* Dark grey color for text */
-  }
-
-  .wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border: 10px solid #e30707; */
-    width: 90%;
-  }
-
-
-  .flashcard-container {
+.flashcard-container {
     margin-top: 50px;
     width: 712px; /* Prevents it from becoming too large */
     height: 712px; /* Adjust based on your content */
@@ -114,12 +93,12 @@ body, html {
     color: #333; /* Title text color */
     font-weight: bold; /* Title font weight */
     z-index: 10; /* Ensure title is always visible */
-    margin-top: 165px;
+    margin-top: 175px;
     margin-bottom: 0;
   }
 
 
-.flashcard-header {
+.flashcard-sentence {
     color: #444;
     position: relative;
     font-family: 'IM Fell English SC', serif;
