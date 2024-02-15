@@ -18,7 +18,7 @@ if (IS_RUNNING_ON_LOCAL === true) {
 }
 else{
     /* Fetch from github master */
-    fetch(`http://raw.githubusercontent.com/doruirimescu/language-flashcards/master/public/data/${type}.json`)
+    fetch(`https://raw.githubusercontent.com/doruirimescu/language-flashcards/master/public/data/${type}.json`)
     .then(response => response.json())
     .then(data => {
         console.log(data);
