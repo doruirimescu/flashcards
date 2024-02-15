@@ -4,15 +4,16 @@ const yaml = require('js-yaml');
 const path= require('path');
 const app = express();
 const port = 3001;
+IS_RUNNING_ON_LOCAL = true;
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/index.html'));
+  res.sendFile(path.join(__dirname, './index.html'));
 });
 
 
-app.get('/flashcards', (req, res) => {
+app.get('/public/flashcards', (req, res) => {
   try {
     const type = req.query.type;
     /* if type is verbs, load flashcard-verbs.yaml */

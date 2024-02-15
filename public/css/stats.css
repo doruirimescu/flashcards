@@ -1,8 +1,13 @@
 .stats {
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 400px;
+    max-width: 712px;
     text-align: center;
     font-family: 'IM Fell English SC', serif;
     font-weight: bold;
+    position: relative;
 }
 
 .progress-bar-container {
@@ -11,11 +16,14 @@
     background-color: #eee;
     border-radius: 10px;
     margin: 10px auto;
+    position: relative;
 }
 
 .progress-bar {
     height: 100%;
+    margin: auto;
     background-color: #4CAF50;
     border-radius: 8px;
     transition: width 0.4s ease-in-out;
+    position: relative;
 }
