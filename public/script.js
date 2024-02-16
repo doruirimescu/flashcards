@@ -43,14 +43,17 @@ function displayFlashcard(index) {
     const flashcardContainer = document.getElementById('flashcardContainer');
     flashcardContainer.innerHTML = `
         <div class="front" id="frontFlash"></div>
+
         <div class="back" id="backFlash">
             <div class="back-content">
-                <h2 class="flashcard-title">${flashcard.title}</h2>
+                <div class="flashcard-title">
+                    ${flashcard.title}
+                </div>
                 <div class="flashcard-sentence">
                     <h2>${flashcard.sentence}</h2>
                 </div>
                 <div class="flashcard-list">
-                <ul>${flashcard.listContent.map((item) => `<li>${item}</li>`).join('')}</ul>
+                    <ul>${flashcard.listContent.map((item) => `<li>${item}</li>`).join('')}</ul>
                 </div>
             </div>
         </div>

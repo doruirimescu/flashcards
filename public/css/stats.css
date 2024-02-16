@@ -6,6 +6,7 @@
     text-align: center;
     font-family: 'IM Fell English SC', serif;
     font-weight: bold;
+    font-size:1.0vw;
     position: relative;
 }
 
@@ -25,3 +26,15 @@
     transition: width 0.4s ease-in-out;
     position: relative;
 }
+
+@media only screen and (max-width: 1000px) {
+    .stats {
+        font-size: 2.0vw;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .stats {
+        font-size: 3.0vw;
+    }
+  }

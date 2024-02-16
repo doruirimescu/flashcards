@@ -17,7 +17,7 @@
         "frontImage": "assets/front/sulattaa.png",
         "backImage": "assets/back/image41.png",
         "frontContent": "The sun melts the snow",
-        "sentence": "Aurinko sulttaa lumen.",
+        "sentence": "Aurinko sulattaa lumen.",
         "listContent": [
           "Sulattaa + obj",
           "<a href='https://www.verbix.com/webverbix/finnish/sulttaa'>verbix</a>"

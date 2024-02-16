@@ -8,9 +8,10 @@ button {
     transition: background-color 0.3s ease; /* Smooth background color change on hover */
     position: relative;
     width: 8vw;
+    height: auto;
     margin: 0 1vw;
     font-family: 'IM Fell English SC', serif;
-    font-size: large;
+    font-size: 1.5vw;
   }
 
   button:hover {
@@ -20,3 +21,28 @@ button {
   button:active {
     background-color: #004099; /* Even darker shade of blue when active/clicked */
   }
+
+  @media only screen and (max-width: 1000px) {
+    .button {
+        width: 10vw;
+        font-size: 2.0vw;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .button {
+        width: 15.0vw;
+        font-size: 3.0vw;
+    }
+  }
+
+  /* ----------- iPhone X ----------- */
+    /* Portrait and Landscape */
+    @media only screen
+    and (-webkit-min-device-pixel-ratio: 3) {
+        .button {
+            width: 20vw;
+            height: auto;
+            font-size: 3.0vw;
+        }
+    }
