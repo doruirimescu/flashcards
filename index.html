@@ -7,6 +7,7 @@
     <link href="./public/css/style.css" rel="stylesheet">
     <link href="./public/css/index.css" rel="stylesheet">
     <link href="./public/css/buttons.css" rel="stylesheet">
+    <link href="./public/css/debug.css" rel="stylesheet">
     <title>Language Learning App</title>
 </head>
 <body>
@@ -19,6 +20,18 @@
             <button class = "button" onclick="location.href='public/flashcard.html?type=phrases'">Phrases</button>
         </div>
     </div>
+    <div class="debug">
+        <h2>Debug</h2>
+        <p>Debugging information will appear here</p>
+        <button class="debug-button" id="buttonIncrease">Increase Button Width</button>
+        <button class="debug-button" id="buttonDecrease">Decrease Button Width</button>
+
+        <button class="debug-button" id="buttonFontIncrease">Increase Button Font</button>
+        <button class="debug-button" id="buttonFontDecrease">Decrease Button Font</button>
+        <p id="buttonWidthDisplay">Button width: 0vw</p>
+        <p id="buttonFontDisplay">Button font: 0vw</p>
+    </div>
 <script src="public/config.js"></script>
+<script src="public/debug.js"></script>
 </body>
 </html>

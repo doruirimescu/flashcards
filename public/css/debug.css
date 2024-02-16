@@ -1,0 +1,9 @@
+.debug {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+.debug-button {
+    background-color: #4CAF50; /* Green background for visibility */
+    margin-top:1em;
+  }

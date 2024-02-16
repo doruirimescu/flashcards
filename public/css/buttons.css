@@ -73,9 +73,9 @@ button {
     @media only screen
     and (-webkit-min-device-pixel-ratio: 3) {
         .button {
-            width: 20vw;
+            width: 19.44vw;
             height: auto;
-            font-size: 10.0vw;
+            font-size: 4.4vw;
         }
 
         .icon-button {
