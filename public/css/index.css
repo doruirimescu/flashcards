@@ -1,0 +1,10 @@
+#categorySelection {
+    position: relative;
+    color: #333; /* Dark grey color for text */
+    font-family: 'IM Fell English SC';
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
