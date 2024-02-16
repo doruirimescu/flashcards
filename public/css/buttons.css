@@ -73,16 +73,16 @@ button {
     @media only screen
     and (-webkit-min-device-pixel-ratio: 3) {
         .button {
-            width: 60vw;
+            width: 20vw;
             height: auto;
             font-size: 10.0vw;
         }
 
         .icon-button {
-            width: 10vw;
-            height: 10vw;
+            width: 12vw;
+            height: 12vw;
             border-radius: 30%;
-            font-size: 7.0vw;
+            font-size: 6.5vw;
             line-height: 1vw;
         }
     }

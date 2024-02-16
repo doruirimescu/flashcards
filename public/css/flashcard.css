@@ -176,7 +176,7 @@
             width: 80vw; /* Match the child elements */
             height: 90vw;
             perspective: 600px;
-            margin-top: 10vw;
+            margin-top: 15vw;
         }
         .flashcard-title {
             font-size: 10.0vw;
@@ -187,5 +187,9 @@
         }
         .flashcard-list {
             font-size: 3.7vw;
+        }
+
+        .front::after {
+            font-size: 6.0vw; /* Adjust size as needed */
         }
     }
