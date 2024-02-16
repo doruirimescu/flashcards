@@ -5,12 +5,12 @@ button {
     border: none; /* Remove default border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Cursor changes to pointer on hover */
-    font-size: 17px; /* Increase font size */
     transition: background-color 0.3s ease; /* Smooth background color change on hover */
     position: relative;
-    width: 100px;
-    margin: 0 10px;
+    width: 8vw;
+    margin: 0 1vw;
     font-family: 'IM Fell English SC', serif;
+    font-size: large;
   }
 
   button:hover {
