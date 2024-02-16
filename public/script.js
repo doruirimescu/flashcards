@@ -7,7 +7,7 @@ console.log("IS RUNNING LOCAL:", IS_RUNNING_ON_LOCAL);
 
 if (IS_RUNNING_ON_LOCAL === true) {
     /* Fetch from local server */
-    fetch(`http://localhost:3001/flashcards?type=${type}`)
+    fetch(`./data/${type}.json`)
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -53,8 +53,9 @@ function displayFlashcard(index) {
                     <h2>${flashcard.sentence}</h2>
                 </div>
                 <div class="flashcard-list">
-                    <ul>${flashcard.listContent.map((item) => `<li>${item}</li>`).join('')}</ul>
+                    ${flashcard.listContent.length > 0 ? `<ul>${flashcard.listContent.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
                 </div>
+
             </div>
         </div>
     `;
