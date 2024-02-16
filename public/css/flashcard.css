@@ -12,6 +12,17 @@
     position: relative;
   }
 
+  /* Mobile-specific styles */
+@media (max-width: 600px) {
+.flashcard-container {
+    margin-top: 5vw; /* Increase top margin for better spacing */
+    width: 90vw; /* Adjust width to be responsive */
+    height: auto; /* Make height auto to maintain aspect ratio */
+    max-width: none; /* Remove max-width constraint */
+    max-height: none; /* Remove max-height constraint */
+    perspective: 600px; /* Adjust perspective for smaller screens */
+}
+
   .flashcard-container.flipped .front:hover::after {
     visibility: hidden;
     opacity: 0;
