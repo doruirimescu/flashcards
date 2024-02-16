@@ -44,6 +44,6 @@
     @media only screen
     and (-webkit-min-device-pixel-ratio: 3) {
         .stats {
-            font-size: 4.0vw;
+            font-size: 6.0vw;
         }
     }
