@@ -9,30 +9,62 @@ button {
     position: relative;
     width: 8vw;
     height: auto;
-    margin: 0 1vw;
+    margin: 0 0.6vw;
     font-family: 'IM Fell English SC', serif;
     font-size: 1.5vw;
   }
 
-  button:hover {
-    background-color: #0056b3; /* Darker shade of blue on hover */
-  }
+    button:hover {
+        background-color: #0056b3; /* Darker shade of blue on hover */
+    }
 
-  button:active {
-    background-color: #004099; /* Even darker shade of blue when active/clicked */
-  }
+    button:active {
+        background-color: #004099; /* Even darker shade of blue when active/clicked */
+    }
+
+    .icon-button {
+        width: 3vw;
+        height: 3vw;
+        border-radius: 30%;
+        text-align: center;
+        /*maintain line */
+    }
+
+    @media only screen and (max-width: 1500px) {
+        .icon-button {
+            width: 5vw;
+            height: 5vw;
+            border-radius: 30%;
+            font-size:3.0vw;
+            line-height: 2vw;
+        }
+      }
 
   @media only screen and (max-width: 1000px) {
     .button {
         width: 10vw;
         font-size: 2.0vw;
     }
+    .icon-button {
+        width: 5vw;
+        height: 5vw;
+        border-radius: 30%;
+        font-size:3.0vw;
+    }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 700px) {
     .button {
         width: 15.0vw;
         font-size: 3.0vw;
+    }
+
+    .icon-button {
+        width: 5vw;
+        height: 5vw;
+        border-radius: 30%;
+        font-size:3.0vw;
+        line-height: 1vw;
     }
   }
 
@@ -44,5 +76,13 @@ button {
             width: 40vw;
             height: auto;
             font-size: 5.0vw;
+        }
+
+        .icon-button {
+            width: 15vw;
+            height: 15vw;
+            border-radius: 30%;
+            font-size: 5.0vw;
+            line-height: 1vw;
         }
     }

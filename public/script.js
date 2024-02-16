@@ -68,9 +68,8 @@ function displayFlashcard(index) {
 }
 
 
-
 document.getElementById('nextButton').addEventListener('click', () => {
-    currentFlashcardIndex = (currentFlashcardIndex + 1); // Loop back to the first card after the last
+    currentFlashcardIndex = (currentFlashcardIndex + 1);
     if (currentFlashcardIndex >= flashcards.length)
     {
         currentFlashcardIndex = flashcards.length - 1;
@@ -79,12 +78,22 @@ document.getElementById('nextButton').addEventListener('click', () => {
   });
 
 document.getElementById('previousButton').addEventListener('click', () => {
-    // if currentFlashcardIndex
-
-    currentFlashcardIndex = (currentFlashcardIndex - 1) % flashcards.length; // Loop back to the first card after the last
+    currentFlashcardIndex = (currentFlashcardIndex - 1) % flashcards.length;
     if (currentFlashcardIndex < 0)
     {
         currentFlashcardIndex = 0;
     }
+    displayFlashcard(currentFlashcardIndex);
+});
+
+document.getElementById('firstButton').addEventListener('click', () => {
+    currentFlashcardIndex = 0;
+    updateStats(currentFlashcardIndex + 1, flashcards.length);
+    displayFlashcard(currentFlashcardIndex);
+});
+
+document.getElementById('lastButton').addEventListener('click', () => {
+    currentFlashcardIndex = flashcards.length-1;
+    updateStats(currentFlashcardIndex + 1, flashcards.length);
     displayFlashcard(currentFlashcardIndex);
 });
