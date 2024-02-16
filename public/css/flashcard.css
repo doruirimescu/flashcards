@@ -12,16 +12,20 @@
     position: relative;
   }
 
-  /* Mobile-specific styles */
-@media (max-width: 600px) {
-.flashcard-container {
-    margin-top: 5vw; /* Increase top margin for better spacing */
-    width: 90vw; /* Adjust width to be responsive */
-    height: auto; /* Make height auto to maintain aspect ratio */
-    max-width: none; /* Remove max-width constraint */
-    max-height: none; /* Remove max-height constraint */
-    perspective: 600px; /* Adjust perspective for smaller screens */
-}
+    /* ----------- iPhone X ----------- */
+
+    /* Portrait and Landscape */
+    @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+        .flashcard-container {
+            width: 80vw; /* Match the child elements */
+            height: 80vw;
+            perspective: 600px;
+            margin-top: 10vw;
+        }
+    }
 
   .flashcard-container.flipped .front:hover::after {
     visibility: hidden;
