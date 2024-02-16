@@ -4,7 +4,7 @@ const yaml = require('js-yaml');
 const path= require('path');
 const app = express();
 const port = 3001;
-IS_RUNNING_ON_LOCAL = true;
+IS_HOSTED_LOCALLY = true;
 
 app.use(express.static('public'));
 

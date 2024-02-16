@@ -3,9 +3,9 @@ const params = new URLSearchParams(window.location.search);
 const type = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
 
 console.log('type:', type);
-console.log("IS RUNNING LOCAL:", IS_RUNNING_ON_LOCAL);
+console.log("IS RUNNING LOCAL:", IS_HOSTED_LOCALLY);
 
-if (IS_RUNNING_ON_LOCAL === true) {
+if (IS_HOSTED_LOCALLY === true) {
     /* Fetch from local server */
     fetch(`./data/${type}.json`)
     .then(response => response.json())
