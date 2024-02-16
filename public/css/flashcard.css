@@ -1,5 +1,5 @@
 .flashcard-container {
-    margin-top: 2vw;
+    margin-top: 3em;
     margin-left: auto;
     margin-right: auto;
     width: 37.5vw; /* Match the child elements */
@@ -84,7 +84,6 @@
     justify-content: center;
     font-family: 'IM Fell English SC', serif;
     font-weight: bold;
-    font-size: 90;
   }
 
   .front:hover::after {
@@ -108,14 +107,13 @@
   }
 
   .flashcard-title {
-    display: flex;
-    justify-content: center;
     font-family: 'Almendra SC', serif;
-    font-size: 3.5em; /* Large font for the verb */
     color: #333; /* Title text color */
     font-weight: bold; /* Title font weight */
+    text-align: center;
+    font-size: 3.0vw; /* Large font for the verb */
     z-index: 10; /* Ensure title is always visible */
-    margin-top: 25%;
+    margin-top: 3.0em;
     margin-bottom: 0;
   }
 
@@ -125,7 +123,7 @@
     position: relative;
     font-family: 'IM Fell English SC', serif;
     text-align: center;
-    font-size: 20px; /* Adjust size as needed */
+    font-size: 1.1vw; /* Adjust size as needed */
     margin-top:10px;
     margin-bottom: 0;
     max-width: 21vw;
@@ -134,9 +132,9 @@
   .flashcard-list {
     font-family: 'IM Fell English SC', serif;
     color: #444;
-    font-size: 20px; /* Adjust size as needed */
+    font-size: 1.1vw; /* Adjust size as needed */
     font-weight: bold;
     text-align: left;
     margin:auto;
-    max-width: 21vw;
+    max-width: 35vw;
   }
