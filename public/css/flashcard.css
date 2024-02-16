@@ -1,11 +1,11 @@
 .flashcard-container {
-    margin-top: 50px;
+    margin-top: 2vw;
     margin-left: auto;
     margin-right: auto;
-    width: 712px; /* Match the child elements */
-    height: 712px; /* Match the child elements */
-    max-width: 80%;
-    max-height: 80%;
+    width: 37.5vw; /* Match the child elements */
+    height: 37.5vw;
+    max-width: 712px;
+    max-height: 712px;
     perspective: 1000px; /* Added for 3D effect */
     transition: transform 0.8s;
     cursor: pointer;
@@ -85,7 +85,6 @@
     z-index: 2;
     /* Align your text as needed */
     display: flex;
-    width: 500px;
     margin: auto;
     flex-direction: column;
     justify-content: center;
@@ -101,7 +100,7 @@
     color: #333; /* Title text color */
     font-weight: bold; /* Title font weight */
     z-index: 10; /* Ensure title is always visible */
-    margin-top: 175px;
+    margin-top: 25%;
     margin-bottom: 0;
   }
 
@@ -114,7 +113,7 @@
     font-size: 20px; /* Adjust size as needed */
     margin-top:10px;
     margin-bottom: 0;
-    max-width: 400px;
+    max-width: 21vw;
   }
 
   .flashcard-list {
@@ -124,5 +123,5 @@
     font-weight: bold;
     text-align: left;
     margin:auto;
-    max-width: 400px;
+    max-width: 21vw;
   }
