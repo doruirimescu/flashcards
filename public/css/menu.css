@@ -20,3 +20,12 @@
             margin-top: 1.8vw;
         }
     }
+
+/* ----------- iPhone SE ----------- */
+/* Portrait and Landscape */
+    @media only screen
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .menu {
+            margin-top: 3.0vw;
+        }
+    }
