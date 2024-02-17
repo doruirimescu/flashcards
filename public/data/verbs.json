@@ -38,13 +38,12 @@
         ]
       },
       {
-        "title": "VÄITELLÄ (3)",
-        "frontImage": "assets/front/väitellä.png",
-        "backImage": "assets/back/image41.png",
-        "frontContent": "Two characters argue about the meaning of life in an old, mysterious library.",
-        "sentence": "Kaksi hahmoa väittelee elämän tarkoituksesta vanhassa, salaperäisessä kirjastossa.",
+        "title": "",
+        "frontImage": "assets/front/vaitella.png",
+        "backImage": "assets/back/vaitella.png",
+        "frontContent": "Two characters argue about the meaning of life.",
+        "sentence": "",
         "listContent": [
-            "Hello"
         ]
       }
     ]
