@@ -63,6 +63,15 @@
         "sentence": "",
         "listContent": [
         ]
+      },
+      {
+        "title": "",
+        "frontImage": "assets/front/kamppailla2.png",
+        "backImage": "assets/back/kamppailla.png",
+        "frontContent": "Two bears struggle/fight for food in the forest.",
+        "sentence": "",
+        "listContent": [
+        ]
       }
     ]
   }
