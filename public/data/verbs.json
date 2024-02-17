@@ -45,6 +45,24 @@
         "sentence": "",
         "listContent": [
         ]
+      },
+      {
+        "title": "",
+        "frontImage": "assets/front/venyttaa.png",
+        "backImage": "assets/back/venyttaa.png",
+        "frontContent": "She stretches a rubber band carefully.",
+        "sentence": "",
+        "listContent": [
+        ]
+      },
+      {
+        "title": "",
+        "frontImage": "assets/front/venya.png",
+        "backImage": "assets/back/venya.png",
+        "frontContent": "The rubber band stretches when it is stretched.",
+        "sentence": "",
+        "listContent": [
+        ]
       }
     ]
   }
