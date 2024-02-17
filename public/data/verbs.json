@@ -72,6 +72,15 @@
         "sentence": "",
         "listContent": [
         ]
+      },
+      {
+        "title": "",
+        "frontImage": "assets/front/hahmottaa.png",
+        "backImage": "assets/back/hahmottaa.png",
+        "frontContent": "The map reader figures out the route while adventuring in the mountains.",
+        "sentence": "",
+        "listContent": [
+        ]
       }
     ]
   }
