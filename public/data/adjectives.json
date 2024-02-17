@@ -8,6 +8,15 @@
         "sentence": "",
         "listContent": [
         ]
+      },
+      {
+        "title": "",
+        "frontImage": "assets/front/maaratietoinen.png",
+        "backImage": "assets/back/maaratietoinen.png",
+        "frontContent": "A determined dog follows tracks in the forest.",
+        "sentence": "",
+        "listContent": [
+        ]
       }
     ]
   }
