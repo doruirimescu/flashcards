@@ -3,7 +3,7 @@
       {
         "title": "",
         "frontImage": "assets/front/sulaa.png",
-        "backImage": "assets/back/lskp.png",
+        "backImage": "assets/back/sulaa.png",
         "frontContent": "The snow melts when the sun is shining",
         "sentence": "",
         "listContent": [
@@ -21,23 +21,20 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/pyörittää.png",
-        "backImage": "assets/back/pyörittää.png",
+        "frontImage": "assets/front/pyorittaa.png",
+        "backImage": "assets/back/pyorittaa.png",
         "frontContent": "When a child rolls a snowball, it grows big",
         "sentence": "",
         "listContent": [
         ]
       },
       {
-        "title": "HIERTÄÄ (1)",
-        "frontImage": "assets/front/hiertää.png",
-        "backImage": "assets/back/image41.png",
+        "title": "",
+        "frontImage": "assets/front/hiertaa.png",
+        "backImage": "assets/back/hiertaa.png",
         "frontContent": "The shoe is chafing me",
-        "sentence": "Kenkä hiertää minua.",
+        "sentence": "",
         "listContent": [
-          "Hiertää + P",
-          "hierrän / hiersin / olen hiertänyt / olin hiertänyt / hierrettäisiin, ei hierrettäisi",
-          "<a href='https://www.verbix.com/webverbix/finnish/hiertaa'>verbix</a>"
         ]
       },
       {
