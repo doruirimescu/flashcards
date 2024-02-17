@@ -11,26 +11,21 @@
         ]
       },
       {
-        "title": "SULATTAA (1)",
+        "title": "",
         "frontImage": "assets/front/sulattaa.png",
-        "backImage": "assets/back/image41.png",
+        "backImage": "assets/back/sulattaa.png",
         "frontContent": "The sun melts the snow",
-        "sentence": "Aurinko sulattaa lumen.",
+        "sentence": "",
         "listContent": [
-          "Sulattaa + obj",
-          "<a href='https://www.verbix.com/webverbix/finnish/sulttaa'>verbix</a>"
         ]
       },
       {
-        "title": "PYÖRITTÄÄ (1)",
+        "title": "",
         "frontImage": "assets/front/pyörittää.png",
-        "backImage": "assets/back/image41.png",
+        "backImage": "assets/back/pyörittää.png",
         "frontContent": "When a child rolls a snowball, it grows big",
-        "sentence": "Kun lapsi pyörittää lumipalloa, se kasvaa suureksi.",
+        "sentence": "",
         "listContent": [
-          "Pyörittää + obj",
-          "suuri -> suure/n -> suureksi",
-          "<a href='https://www.verbix.com/webverbix/finnish/sulttaa'>verbix</a>"
         ]
       },
       {
