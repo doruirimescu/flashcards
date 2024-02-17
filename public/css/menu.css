@@ -1,6 +1,6 @@
 .menu {
     text-align: center; /* Center the buttons horizontally */
-    margin-top: 1.0vw; /* Adjust the space between the flashcard container and the menu */
+    margin-top: 1.0vw;
     margin-left: auto;
     margin-right: auto;
     max-width: 80%;
@@ -10,3 +10,13 @@
     border-width: 5px;
     position: relative;
 }
+
+
+/* ----------- iPhone X ----------- */
+    /* Portrait and Landscape */
+    @media only screen
+    and (-webkit-min-device-pixel-ratio: 3) {
+        .menu {
+            margin-top: 1.8vw;
+        }
+    }
