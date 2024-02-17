@@ -44,6 +44,17 @@
     @media only screen
     and (-webkit-min-device-pixel-ratio: 3) {
         .stats {
-            font-size: 5.0vw;
+            font-size: 4.0vw;
+        }
+    }
+
+    /* ----------- iPhone SE ----------- */
+    /* Portrait and Landscape */
+    @media only screen
+    and (-webkit-device-pixel-ratio: 2) {
+        .button {
+            width: 22vw;
+            height: auto;
+            font-size: 4.0vw;
         }
     }
