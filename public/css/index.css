@@ -8,3 +8,13 @@
     text-align: center;
 
 }
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    align-self: auto;
+    position: relative;
+}
