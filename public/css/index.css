@@ -10,11 +10,11 @@
 }
 
 .category {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     width: 60%;
     margin: auto;
-    align-items: center;
-    align-self: auto;
     position: relative;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    row-gap: 5%;
+    column-gap: 5%;
 }
