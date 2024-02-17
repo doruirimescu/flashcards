@@ -1,11 +1,11 @@
 {
     "flashcards": [
       {
-        "title": "PIKKU HILJAA",
+        "title": "",
         "frontImage": "assets/front/pikku_hiljaa.png",
-        "backImage": "assets/back/image41.png",
+        "backImage": "assets/back/pikku_hiljaa.png",
         "frontContent": "Little by little, a seed grows into a large tree.",
-        "sentence": "Pikku hiljaa, siemenestä kasvaa suuri puu.",
+        "sentence": "",
         "listContent": []
       }
     ]

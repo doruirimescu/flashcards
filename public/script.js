@@ -1,34 +1,52 @@
 let flashcards=[];
 const params = new URLSearchParams(window.location.search);
-const type = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
+const param_type = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
+let currentFlashcardIndex = 0;
 
-console.log('type:', type);
+async function getAllData() {
+    if (param_type != "all"){
+        flashcards = await getDataForType(param_type);
+        displayFlashcard(currentFlashcardIndex);
+    }
+    else {
+        flashcards = await getDataForType("verbs");
+        flashcards = flashcards.concat(await getDataForType("adjectives"));
+        flashcards = flashcards.concat(await getDataForType("nouns"));
+        flashcards = flashcards.concat(await getDataForType("phrases"));
+        displayFlashcard(currentFlashcardIndex);
+    }
+}
+
+getAllData();
+
+/* await that flashcards is full */
+
+// displayFlashcard(currentFlashcardIndex);
+
+// else{
+//     console.log("Fetching all flashcards", param_type);
+//     flashcards = getDataForType("verbs");
+//     flashcards = flashcards.concat(getDataForType("adjectives"));
+//     flashcards = flashcards.concat(getDataForType("nouns"));
+//     flashcards = flashcards.concat(getDataForType("phrases"));
+
+//     displayFlashcard(currentFlashcardIndex);
+
+// }
 console.log("IS RUNNING LOCAL:", IS_HOSTED_LOCALLY);
 
-if (IS_HOSTED_LOCALLY === true) {
-    /* Fetch from local server */
-    fetch(`./data/${type}.json`)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        flashcards = data.flashcards;
-        displayFlashcard(currentFlashcardIndex);
-    })
-    .catch(error => console.error('Error fetching flashcards:', error));
+async function getDataForType(type) {
+    var fetch_url = "";
+    if (IS_HOSTED_LOCALLY === true) {
+        fetch_url = `./data/${type}.json`;
+    }
+    else{
+        fetch_url = `${GITHUB_FETCH_URL}${type}.json`;
+    }
+    const response = await fetch(fetch_url);
+    const data = await response.json();
+    return data.flashcards;
 }
-else{
-    /* Fetch from github branch. See config.js */
-    fetch(`${GITHUB_FETCH_URL}${type}.json`)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        flashcards = data.flashcards;
-        displayFlashcard(currentFlashcardIndex);
-    })
-    .catch(error => console.error('Error fetching flashcards:', error));
-}
-
-let currentFlashcardIndex = 0;
 
 function updateStats(currentIndex, totalCards) {
     const percentage = (currentIndex / totalCards) * 100;
