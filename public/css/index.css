@@ -12,9 +12,10 @@
 .category {
     display: grid;
     width: 60%;
-    margin: auto;
     position: relative;
     grid-template: repeat(4, 1fr) / repeat(4, 1fr);
     row-gap: 5%;
     column-gap: 5%;
+    justify-content: center;
+    margin:auto;
 }
