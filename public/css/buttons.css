@@ -91,7 +91,7 @@ button {
 /* ----------- iPhone SE ----------- */
     /* Portrait and Landscape */
     @media only screen
-    and (-webkit-min-device-pixel-ratio: 2) {
+    and (-webkit-device-pixel-ratio: 2) {
         .button {
             width: 22vw;
             height: auto;
