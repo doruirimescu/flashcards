@@ -8,6 +8,15 @@
         "sentence": "",
         "listContent": [
         ]
+      },
+      {
+        "title": "",
+        "frontImage": "assets/front/kahva.png",
+        "backImage": "assets/back/kahva.png",
+        "frontContent": "The coffee cup's handle is hot.",
+        "sentence": "",
+        "listContent": [
+        ]
       }
     ]
   }
