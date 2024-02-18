@@ -20,7 +20,6 @@ function populateLanguageSelection() {
     currentLanguage = localStorage.getItem('selectedLanguage') || Object.keys(languageData)[0];
 
     for (var key in languageData){
-        console.log( key, languageData[key] );
         const option = document.createElement('option');
         option.value = key;
         option.textContent = key;
