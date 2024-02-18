@@ -14,6 +14,12 @@ async function getLanguageData() {
     return data;
 }
 
+function updateWelcome()
+{
+    // set the text of the currentLanguage id
+    document.getElementById('welcome').textContent = `You are learning ${currentLanguage}`;
+}
+
 function populateLanguageSelection() {
     const selectElement = document.getElementById('language-select');
     // Retrieve the selected language from localStorage if it exists,
@@ -57,12 +63,14 @@ async function init()
     localStorage.setItem('languageData', JSON.stringify(languageData));
     populateLanguageSelection();
     updateCategoryButtons();
+    updateWelcome();
 
     // Call this function after populating the language selection and whenever the language changes
     document.getElementById('language-select').addEventListener('change', function() {
         currentLanguage = this.value;
         localStorage.setItem('selectedLanguage', currentLanguage);
         updateCategoryButtons(); // Update buttons based on the newly selected language
+        updateWelcome();
     });
 }
 

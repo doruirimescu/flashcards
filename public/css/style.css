@@ -8,6 +8,7 @@ body, html {
     font-size: large;
     position: relative;
     margin: auto;
+    min-width: 650px;
   }
 
   .wrapper{

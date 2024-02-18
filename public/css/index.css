@@ -19,3 +19,9 @@
     justify-content: center;
     margin:auto;
 }
+
+#welcome {
+    font-family: 'IM Fell English SC';
+    font-size: 3vw;
+    text-align: center;
+}
