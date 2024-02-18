@@ -2,8 +2,8 @@
     "flashcards": [
       {
         "title": "",
-        "frontImage": "assets/front/finnish/sulaa.png",
-        "backImage": "assets/back/finnish/sulaa.png",
+        "frontImage": "assets/front/finnish/sulaa.jpg",
+        "backImage": "assets/back/finnish/sulaa.jpg",
         "frontContent": "The snow melts when the sun is shining",
         "sentence": "",
         "listContent": [
@@ -12,8 +12,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/sulattaa.png",
-        "backImage": "assets/back/finnish/sulattaa.png",
+        "frontImage": "assets/front/finnish/sulattaa.jpg",
+        "backImage": "assets/back/finnish/sulattaa.jpg",
         "frontContent": "The sun melts the snow",
         "sentence": "",
         "listContent": [
@@ -21,8 +21,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/pyorittaa.png",
-        "backImage": "assets/back/finnish/pyorittaa.png",
+        "frontImage": "assets/front/finnish/pyorittaa.jpg",
+        "backImage": "assets/back/finnish/pyorittaa.jpg",
         "frontContent": "When a child rolls a snowball, it grows big",
         "sentence": "",
         "listContent": [
@@ -30,8 +30,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/hiertaa.png",
-        "backImage": "assets/back/finnish/hiertaa.png",
+        "frontImage": "assets/front/finnish/hiertaa.jpg",
+        "backImage": "assets/back/finnish/hiertaa.jpg",
         "frontContent": "The shoe is chafing me",
         "sentence": "",
         "listContent": [
@@ -39,8 +39,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/vaitella.png",
-        "backImage": "assets/back/finnish/vaitella.png",
+        "frontImage": "assets/front/finnish/vaitella.jpg",
+        "backImage": "assets/back/finnish/vaitella.jpg",
         "frontContent": "Two characters argue about the meaning of life.",
         "sentence": "",
         "listContent": [
@@ -48,8 +48,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/venyttaa.png",
-        "backImage": "assets/back/finnish/venyttaa.png",
+        "frontImage": "assets/front/finnish/venyttaa.jpg",
+        "backImage": "assets/back/finnish/venyttaa.jpg",
         "frontContent": "She stretches a rubber band carefully.",
         "sentence": "",
         "listContent": [
@@ -57,8 +57,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/venya.png",
-        "backImage": "assets/back/finnish/venya.png",
+        "frontImage": "assets/front/finnish/venya.jpg",
+        "backImage": "assets/back/finnish/venya.jpg",
         "frontContent": "The rubber band stretches when it is stretched.",
         "sentence": "",
         "listContent": [
@@ -66,8 +66,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/kamppailla2.png",
-        "backImage": "assets/back/finnish/kamppailla.png",
+        "frontImage": "assets/front/finnish/kamppailla2.jpg",
+        "backImage": "assets/back/finnish/kamppailla.jpg",
         "frontContent": "Two bears struggle/fight for food in the forest.",
         "sentence": "",
         "listContent": [
@@ -75,8 +75,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/hahmottaa.png",
-        "backImage": "assets/back/finnish/hahmottaa.png",
+        "frontImage": "assets/front/finnish/hahmottaa.jpg",
+        "backImage": "assets/back/finnish/hahmottaa.jpg",
         "frontContent": "The map reader figures out the route while adventuring in the mountains.",
         "sentence": "",
         "listContent": [

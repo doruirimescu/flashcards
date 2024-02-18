@@ -2,8 +2,8 @@
     "flashcards": [
       {
         "title": "",
-        "frontImage": "assets/front/finnish/kohtelias.png",
-        "backImage": "assets/back/finnish/kohtelias.png",
+        "frontImage": "assets/front/finnish/kohtelias.jpg",
+        "backImage": "assets/back/finnish/kohtelias.jpg",
         "frontContent": "A polite knight opens the door for an elderly lady.",
         "sentence": "",
         "listContent": [
@@ -11,8 +11,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/maaratietoinen.png",
-        "backImage": "assets/back/finnish/maaratietoinen.png",
+        "frontImage": "assets/front/finnish/maaratietoinen.jpg",
+        "backImage": "assets/back/finnish/maaratietoinen.jpg",
         "frontContent": "A determined dog follows tracks in the forest.",
         "sentence": "",
         "listContent": [
@@ -20,8 +20,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/epatoivoinen.png",
-        "backImage": "assets/back/finnish/epatoivoinen.png",
+        "frontImage": "assets/front/finnish/epatoivoinen.jpg",
+        "backImage": "assets/back/finnish/epatoivoinen.jpg",
         "frontContent": "Desperate.",
         "sentence": "",
         "listContent": [
@@ -29,8 +29,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/keskenerainen.png",
-        "backImage": "assets/back/finnish/keskenerainen.png",
+        "frontImage": "assets/front/finnish/keskenerainen.jpg",
+        "backImage": "assets/back/finnish/keskenerainen.jpg",
         "frontContent": "The artist's studio has many unfinished paintings.",
         "sentence": "",
         "listContent": [

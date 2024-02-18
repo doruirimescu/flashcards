@@ -2,8 +2,8 @@
     "flashcards": [
       {
         "title": "",
-        "frontImage": "assets/front/finnish/hakki.png",
-        "backImage": "assets/back/finnish/hakki.png",
+        "frontImage": "assets/front/finnish/hakki.jpg",
+        "backImage": "assets/back/finnish/hakki.jpg",
         "frontContent": "A strange bird sits in a cage hanging from an old tree's branch.",
         "sentence": "",
         "listContent": [
@@ -11,8 +11,8 @@
       },
       {
         "title": "",
-        "frontImage": "assets/front/finnish/kahva.png",
-        "backImage": "assets/back/finnish/kahva.png",
+        "frontImage": "assets/front/finnish/kahva.jpg",
+        "backImage": "assets/back/finnish/kahva.jpg",
         "frontContent": "The coffee cup's handle is hot.",
         "sentence": "",
         "listContent": [
