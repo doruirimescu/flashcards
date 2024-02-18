@@ -7,7 +7,7 @@ button {
     cursor: pointer; /* Cursor changes to pointer on hover */
     transition: background-color 0.3s ease; /* Smooth background color change on hover */
     position: relative;
-    width: 8vw;
+    width: clamp(8vw, 10vw, 12vw);
     height: auto;
     margin: 0 0.6vw;
     font-family: 'IM Fell English SC', serif;

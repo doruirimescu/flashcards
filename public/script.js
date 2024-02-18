@@ -94,20 +94,13 @@ function preloadImage(url) {
 }
 
 document.getElementById('nextButton').addEventListener('click', () => {
-    currentFlashcardIndex = (currentFlashcardIndex + 1);
-    if (currentFlashcardIndex >= flashcards.length)
-    {
-        currentFlashcardIndex = flashcards.length - 1;
-    }
+    currentFlashcardIndex = Math.min(currentFlashcardIndex + 1,
+        flashcards.length - 1);
     displayFlashcard(currentFlashcardIndex);
   });
 
 document.getElementById('previousButton').addEventListener('click', () => {
-    currentFlashcardIndex = (currentFlashcardIndex - 1) % flashcards.length;
-    if (currentFlashcardIndex < 0)
-    {
-        currentFlashcardIndex = 0;
-    }
+    currentFlashcardIndex = Math.max(currentFlashcardIndex - 1, 0);
     displayFlashcard(currentFlashcardIndex);
 });
 
@@ -118,7 +111,7 @@ document.getElementById('firstButton').addEventListener('click', () => {
 });
 
 document.getElementById('lastButton').addEventListener('click', () => {
-    currentFlashcardIndex = flashcards.length-1;
+    currentFlashcardIndex = flashcards.length - 1;
     updateStats(currentFlashcardIndex + 1, flashcards.length);
     displayFlashcard(currentFlashcardIndex);
 });
