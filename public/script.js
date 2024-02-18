@@ -1,7 +1,6 @@
 let flashcards=[];
 const params = new URLSearchParams(window.location.search);
 const param_type = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
-console.log('Type:', param_type);
 let currentFlashcardIndex = 0;
 
 var languageData = null;
