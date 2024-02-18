@@ -17,6 +17,24 @@
         "sentence": "",
         "listContent": [
         ]
+      },
+      {
+        "title": "",
+        "frontImage": "assets/front/epatoivoinen.png",
+        "backImage": "assets/back/epatoivoinen.png",
+        "frontContent": "Desperate.",
+        "sentence": "",
+        "listContent": [
+        ]
+      },
+      {
+        "title": "",
+        "frontImage": "assets/front/keskenerainen.png",
+        "backImage": "assets/back/keskenerainen.png",
+        "frontContent": "The artist's studio has many unfinished paintings.",
+        "sentence": "",
+        "listContent": [
+        ]
       }
     ]
   }
