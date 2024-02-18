@@ -49,15 +49,13 @@ To add new flashcards to the project, you need to modify the corresponding JSON 
 
 2. Add a new entry for your flashcard with the Finnish word, its English translation, and filenames for the front and back images.
 
-3. Place the front image in the `data/front` directory an the back image in the `data/back` directory.
-4. Ensure your images are correctly named to match the filenames specified in the YAML entry.
+3. Place the front image in the `data/<language>/front` directory an the back image in the `data/<language>/back` directory.
+4. Ensure your images are correctly named to match the filenames specified in the JASON entry.
 
 I have used chatGPT to generate the images.
 
 ## Future Improvements
 This project has great potential for expansion and improvement. But I am lacking the time to contribute more. Here are a few suggestions:
-
-* Support for Multiple Languages: Currently, the project is designed for learners of Finnish. Expanding the project to support additional languages would make it a more versatile learning tool.
 
 * Responsive Design for Different Devices: Improving the project's responsiveness would ensure that it's easily accessible on various devices, including smartphones, tablets, and desktop computers.
 
