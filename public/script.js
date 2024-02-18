@@ -71,8 +71,9 @@ function updateStats(currentIndex, totalCards) {
 
 function displayFlashcard(index) {
     if (!flashcards.length) return; // Guard clause in case flashcards are empty or not yet loaded
-
     const flashcard = flashcards[index];
+    preloadImage(flashcard.frontImage);
+    preloadImage(flashcard.backImage);
     const flashcardContainer = document.getElementById('flashcardContainer');
     flashcardContainer.innerHTML = `
         <div class="front" id="frontFlash"></div>
@@ -100,6 +101,11 @@ function displayFlashcard(index) {
     document.getElementById('flashcardContainer').classList.remove('flipped');
 }
 
+function preloadImage(url) {
+    const img = new Image();
+    img.src = url;
+    img.loading = "lazy"; // This is for lazy loading
+}
 
 document.getElementById('nextButton').addEventListener('click', () => {
     currentFlashcardIndex = (currentFlashcardIndex + 1);
