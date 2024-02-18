@@ -1,7 +1,30 @@
 let flashcards=[];
 const params = new URLSearchParams(window.location.search);
 const param_type = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
+console.log('Type:', param_type);
 let currentFlashcardIndex = 0;
+
+var languageData = null;
+var currentLanguage = null;
+
+if (localStorage.getItem('selectedLanguage')) {
+    currentLanguage = localStorage.getItem('selectedLanguage')
+}
+else{
+    location.replace('index.html');
+}
+
+if (localStorage.getItem('languageData')) {
+    languageData = localStorage.getItem('languageData')
+    languageData = JSON.parse(languageData);
+}
+else{
+    location.replace('index.html');
+}
+
+if (languageData == null || currentLanguage == null) {
+    location.replace('/index.html');
+}
 
 async function getAllData() {
     if (param_type != "all"){
@@ -9,43 +32,36 @@ async function getAllData() {
         displayFlashcard(currentFlashcardIndex);
     }
     else {
-        flashcards = await getDataForType("verbs");
-        flashcards = flashcards.concat(await getDataForType("adjectives"));
-        flashcards = flashcards.concat(await getDataForType("nouns"));
-        flashcards = flashcards.concat(await getDataForType("phrases"));
+        sections = languageData[currentLanguage]["sections"];
+        for (const section of sections) {
+            if (section !== "all") {
+                const sectionFlashcards = await getDataForType(section);
+                flashcards = flashcards.concat(sectionFlashcards);
+            }
+        }
         displayFlashcard(currentFlashcardIndex);
     }
 }
 
 getAllData();
 
-/* await that flashcards is full */
-
-// displayFlashcard(currentFlashcardIndex);
-
-// else{
-//     console.log("Fetching all flashcards", param_type);
-//     flashcards = getDataForType("verbs");
-//     flashcards = flashcards.concat(getDataForType("adjectives"));
-//     flashcards = flashcards.concat(getDataForType("nouns"));
-//     flashcards = flashcards.concat(getDataForType("phrases"));
-
-//     displayFlashcard(currentFlashcardIndex);
-
-// }
-console.log("IS RUNNING LOCAL:", IS_HOSTED_LOCALLY);
-
 async function getDataForType(type) {
     var fetch_url = "";
     if (IS_HOSTED_LOCALLY === true) {
-        fetch_url = `./data/${type}.json`;
+        fetch_url = `./data/${currentLanguage}/${type}.json`;
     }
-    else{
-        fetch_url = `${GITHUB_FETCH_URL}${type}.json`;
+    else {
+        fetch_url = `${GITHUB_FETCH_URL}${currentLanguage}/${type}.json`;
     }
-    const response = await fetch(fetch_url);
-    const data = await response.json();
-    return data.flashcards;
+    try {
+        const response = await fetch(fetch_url);
+        const data = await response.json();
+        return data.flashcards;
+    }
+    catch (error) {
+        console.error('Error:', error);
+        location.replace('/index.html');
+    }
 }
 
 function updateStats(currentIndex, totalCards) {

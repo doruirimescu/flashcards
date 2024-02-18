@@ -1,0 +1,23 @@
+{
+    "finnish": {
+        "name": "finnish",
+        "sections": [
+            "adjectives",
+            "nouns",
+            "verbs",
+            "phrases",
+            "all"
+        ]
+    },
+    "german": {
+        "name": "german",
+        "sections": []
+    },
+    "english": {
+        "name": "english",
+        "sections": [
+            "phrases",
+            "all"
+        ]
+    }
+}

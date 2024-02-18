@@ -7,6 +7,7 @@
     <link href="./public/css/style.css" rel="stylesheet">
     <link href="./public/css/index.css" rel="stylesheet">
     <link href="./public/css/buttons.css" rel="stylesheet">
+    <link href="./public/css/language.css" rel="stylesheet">
     <link href="./public/css/debug.css" rel="stylesheet">
     <title>Language Learning App</title>
 </head>
@@ -14,19 +15,16 @@
     <div class="wrapper">
         <div id="categorySelection">
             <h1>Welcome to the Language Learning App</h1>
-            <div class="category">
-            <button class = "button" onclick="location.href='public/flashcard.html?type=verbs'">Verbs</button>
-            <button class = "button" onclick="location.href='public/flashcard.html?type=nouns'">Nouns</button>
-            <button class = "button" onclick="location.href='public/flashcard.html?type=adjectives'">Adjectives</button>
-            <button class = "button" onclick="location.href='public/flashcard.html?type=phrases'">Phrases</button>
-            <button class = "button" onclick="location.href='public/flashcard.html?type=all'">All</button>
-
-            <!-- <button class = "button" onclick="location.href='public/flashcard.html?type=phrases'">Phrases</button>
-            <button class = "button" onclick="location.href='public/flashcard.html?type=phrases'">Phrases</button>
-            <button class = "button" onclick="location.href='public/flashcard.html?type=phrases'">Phrases</button>
-            <button class = "button" onclick="location.href='public/flashcard.html?type=phrases'">Phrases</button> -->
+            <div class="category" id="category-buttons">
+                <!-- Buttons will be added here dynamically based on the selected language -->
+            </div>
         </div>
-        </div>
+    </div>
+    <div id="language-selection">
+        <label for="language-select">language:</label>
+        <select id="language-select">
+        <!-- Options will be added dynamically by JavaScript -->
+        </select>
     </div>
     <!-- <div class="debug">
         <h2>Debug</h2>
@@ -39,6 +37,7 @@
         <p id="buttonFontDisplay">Button font: 0vw</p>
     </div> -->
 <script src="public/config.js"></script>
+<script src="public/language.js"></script>
 <!-- <script src="public/debug.js"></script> -->
 </body>
 </html>

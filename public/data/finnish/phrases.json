@@ -2,32 +2,32 @@
     "flashcards": [
       {
         "title": "",
-        "frontImage": "assets/front/pikku_hiljaa.png",
-        "backImage": "assets/back/pikku_hiljaa.png",
+        "frontImage": "assets/front/finnish/pikku_hiljaa.png",
+        "backImage": "assets/back/finnish/pikku_hiljaa.png",
         "frontContent": "Little by little, a seed grows into a large tree.",
         "sentence": "",
         "listContent": []
       },
       {
         "title": "",
-        "frontImage": "assets/front/saada_tarpeekseen.png",
-        "backImage": "assets/back/saada_tarpeekseen.png",
+        "frontImage": "assets/front/finnish/saada_tarpeekseen.png",
+        "backImage": "assets/back/finnish/saada_tarpeekseen.png",
         "frontContent": "He had enough with the noise and moved to the countryside.",
         "sentence": "",
         "listContent": []
       },
       {
         "title": "",
-        "frontImage": "assets/front/jaada_ansaan.png",
-        "backImage": "assets/back/jaada_ansaan.png",
+        "frontImage": "assets/front/finnish/jaada_ansaan.png",
+        "backImage": "assets/back/finnish/jaada_ansaan.png",
         "frontContent": "The mouse got trapped while searching for cheese.",
         "sentence": "",
         "listContent": []
       },
       {
         "title": "",
-        "frontImage": "assets/front/valinnan_varaa.png",
-        "backImage": "assets/back/valinnan_varaa.png",
+        "frontImage": "assets/front/finnish/valinnan_varaa.png",
+        "backImage": "assets/back/finnish/valinnan_varaa.png",
         "frontContent": "The restaurant's menu offers a lot of choices.",
         "sentence": "",
         "listContent": []
