@@ -23,6 +23,14 @@
         "frontContent": "The mouse got trapped while searching for cheese.",
         "sentence": "",
         "listContent": []
+      },
+      {
+        "title": "",
+        "frontImage": "assets/front/valinnan_varaa.png",
+        "backImage": "assets/back/valinnan_varaa.png",
+        "frontContent": "The restaurant's menu offers a lot of choices.",
+        "sentence": "",
+        "listContent": []
       }
     ]
   }
