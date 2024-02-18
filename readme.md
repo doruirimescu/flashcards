@@ -20,6 +20,10 @@ To host your own version:
 
 * Adjust the configuration in [public/config.js](public/config.js) to align with your GitHub username and branch.
 
+### Running the Project Locally (Development Mode, Fetching JSONs from GitHub)
+1. Set the [public/config.js](public/config.js) `IS_HOSTED_LOCALLY` variable to `false`.
+2. Navigate to the project's root and open `index.html` in your favourite browser.
+
 ### Running the Project Locally (Development Mode, Serving JSONs from Local HTTP Server)
 
 To run the project locally on your machine, you will need to serve the project files using a local HTTP server. This is easily done with Python 3. Follow these steps:
@@ -34,9 +38,6 @@ python3 -m http.server 8001
 ```
 4. Open your web browser and go to `http://localhost:8001` to view the project.
 
-### Running the Project Locally (Development Mode, Fetching JSONs from GitHub)
-1. Set the [public/config.js](public/config.js) `IS_HOSTED_LOCALLY` variable to `false`.
-2. Navigate to the project's root and open `index.html` in your favourite browser.
 
 ## Adding New Language
 To add a new language to the project, you need to modify the corresponding structure JSON file and create two folders:
