@@ -11,7 +11,7 @@ You have three options to run this project:
 
 
 ### Accessing the Current Version Hosted on GitHub Pages
-To access the live version of this project, simply click on the following link: [Finnish Language Flashcards on GitHub Pages.](https://doruirimescu.github.io/language-flashcards/index.html)
+To access the live version of this project, simply click on the following [link](https://doruirimescu.github.io/language-flashcards/index.html).
 
 To host your own version:
 * Fork this project.
@@ -36,10 +36,16 @@ python3 -m http.server 8001
 1. Set the [public/config.js](public/config.js) `IS_HOSTED_LOCALLY` variable to `false`.
 2. Navigate to the project's root and open `index.html` in your favourite browser.
 
-## Adding New Flashcards
-To add new flashcards to the project, you need to modify the corresponding YAML file and add images for the front and back of the flashcards. Here are the steps:
+## Adding New Language
+To add a new language to the project, you need to modify the corresponding structure JSON file and create two folders:
+1. Add your language and sections in `structure.json` [file](./public/data/structure.json). Familiarize yourself with the contents of this file.
+2. Create a new folder for the back sides of the cards [here](./public/assets/back/). Make sure to name the folder with the exact same name you have used in the `structure.json` file.
+3. Create a new folder for the front sides of the cards [here](./public/assets/front/) Make sure to name the folder with the exact same name you have used in the `structure.json` file.
 
-1. Open the YAML file that corresponds to the category of flashcards you want to add to (e.g., adjectives.yaml for adjective flashcards).
+## Adding New Flashcards
+To add new flashcards to the project, you need to modify the corresponding JSON file and add images for the front and back of the flashcards. Here are the steps:
+
+1. Open the JSON file that corresponds to the category of flashcards you want to add to (e.g., adjectives.json for adjective flashcards).
 
 2. Add a new entry for your flashcard with the Finnish word, its English translation, and filenames for the front and back images.
 
