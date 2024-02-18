@@ -8,7 +8,6 @@ body, html {
     font-size: large;
     position: relative;
     margin: auto;
-    min-width: 650px;
   }
 
   .wrapper{
@@ -18,4 +17,10 @@ body, html {
     width: 90%;
     position: relative;
     margin: auto;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .body {
+        min-width: 650px;
+    }
   }
