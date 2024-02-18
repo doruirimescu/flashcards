@@ -1,6 +1,6 @@
-# Finnish Language Flashcards Project
+# Language Learning Flashcards Project
 
-Welcome to the Finnish Language Flashcards Project! This tool is designed to help learners of the Finnish language improve their vocabulary through interactive flashcards. Below, you'll find instructions on how to run the project locally for development, deploy it using GitHub Pages, add new flashcards, and suggestions for future improvements.
+Welcome to the Language Learning Flashcards Project! This tool is designed to help learners of the Finnish language improve their vocabulary through interactive flashcards. Below, you'll find instructions on how to run the project locally for development, deploy it using GitHub Pages, add new flashcards, and suggestions for future improvements.
 
 ## How to Run the Project
 
