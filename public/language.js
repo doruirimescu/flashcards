@@ -17,7 +17,7 @@ async function getLanguageData() {
 function updateWelcome()
 {
     // set the text of the currentLanguage id
-    document.getElementById('welcome').textContent = `You are learning ${currentLanguage}`;
+    // document.getElementById('welcome').textContent = `You are learning ${currentLanguage}`;
 }
 
 function populateLanguageSelection() {

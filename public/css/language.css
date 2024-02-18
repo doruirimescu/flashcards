@@ -1,7 +1,4 @@
 #language-selection {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    z-index: 1000;
+    text-align: center;
+    margin-bottom: 20px;
 }

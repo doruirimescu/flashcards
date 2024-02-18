@@ -12,19 +12,22 @@
     <title>Language Learning App</title>
 </head>
 <body>
-    <div class="wrapper">
+    <header>
+        <h1 id="welcome">Learn With Flashcards</h1>
+    </header>
+    <div class="wrapper" style="text-align: center;">
+        <div id="language-selection">
+            <label for="language-select">You are learning:</label>
+            <select id="language-select">
+            <!-- Options will be added dynamically by JavaScript -->
+            </select>
+        </div>
+        <hr width="100%" style="margin: auto;">
         <div id="categorySelection">
-            <h1 id="welcome"></h1>
             <div class="category" id="category-buttons">
                 <!-- Buttons will be added here dynamically based on the selected language -->
             </div>
         </div>
-    </div>
-    <div id="language-selection">
-        <label for="language-select">language:</label>
-        <select id="language-select">
-        <!-- Options will be added dynamically by JavaScript -->
-        </select>
     </div>
     <!-- <div class="debug">
         <h2>Debug</h2>
