@@ -16,8 +16,12 @@ async function getLanguageData() {
 
 function populateLanguageSelection() {
     const selectElement = document.getElementById('language-select');
-    // Retrieve the selected language from localStorage if it exists
-    currentLanguage = localStorage.getItem('selectedLanguage') || Object.keys(languageData)[0];
+    // Retrieve the selected language from localStorage if it exists,
+    // otherwise use the first language in the list
+    if (!localStorage.getItem('selectedLanguage')) {
+        localStorage.setItem('selectedLanguage', Object.keys(languageData)[0]);
+    }
+    currentLanguage = localStorage.getItem('selectedLanguage');
 
     for (var key in languageData){
         const option = document.createElement('option');
