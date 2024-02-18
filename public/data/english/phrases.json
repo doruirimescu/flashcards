@@ -1,12 +1,9 @@
 {
     "flashcards": [
       {
-        "title": "",
         "frontImage": "assets/front/english/come_off.jpg",
         "backImage": "assets/back/english/come_off.jpg",
-        "frontContent": "He [...] as confident during his presentation.",
-        "sentence": "",
-        "listContent": []
+        "frontContent": "He [...] as confident during his presentation."
       }
     ]
   }

@@ -77,21 +77,7 @@ function displayFlashcard(index) {
     const flashcardContainer = document.getElementById('flashcardContainer');
     flashcardContainer.innerHTML = `
         <div class="front" id="frontFlash"></div>
-
-        <div class="back" id="backFlash">
-            <div class="back-content">
-                <div class="flashcard-title">
-                    ${flashcard.title}
-                </div>
-                <div class="flashcard-sentence">
-                    <h2>${flashcard.sentence}</h2>
-                </div>
-                <div class="flashcard-list">
-                    ${flashcard.listContent.length > 0 ? `<ul>${flashcard.listContent.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
-                </div>
-
-            </div>
-        </div>
+        <div class="back" id="backFlash"></div>
     `;
     document.getElementById('frontFlash').style.backgroundImage = `url(${flashcard.frontImage})`;
     document.getElementById('backFlash').style.backgroundImage = `url(${flashcard.backImage})`;

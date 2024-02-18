@@ -82,49 +82,11 @@
   }
 
   .back-content {
-    z-index: 2;
-    /* Align your text as needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
-    flex-wrap: wrap;
-    color: #333; /* Title text color */
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     height: 100%;
     position: absolute;
-  }
-
-  .flashcard-title {
-    font-family: 'Almendra SC', serif;
-    font-weight: bold; /* Title font weight */
-    text-align: center;
-    font-size: 3.0vw; /* Large font for the verb */
-    margin-top: 25%;
-    margin-bottom: 0;
-    position: relative;
-  }
-
-.flashcard-sentence {
-    position: relative;
-    font-family: 'IM Fell English SC';
-    text-align: center;
-    width: 65%; /* Adjust width as needed */
-    font-size: 0.9vw; /* Adjust size as needed */
-    margin-bottom: 0;
-  }
-
-  .flashcard-list {
-    position: relative;
-    font-family: 'IM Fell English SC';
-    font-size: 1.1vw; /* Adjust size as needed */
-    width: 65%; /* Adjust width as needed */
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    font-weight: bold;
   }
 
   @media only screen and (max-width: 1000px) {
@@ -136,15 +98,6 @@
     .front::after {
         font-size: 2.0vw; /* Adjust size as needed */
     }
-    .flashcard-title {
-        font-size: 3.0vw; /* Large font for the verb */
-    }
-    .flashcard-sentence {
-        font-size: 1.5vw; /* Adjust size as needed */
-    }
-    .flashcard-list {
-        font-size: 1.5vw; /* Adjust size as needed */
-    }
   }
 
   @media only screen and (max-width: 500px) {
@@ -155,16 +108,6 @@
     }
     .front::after {
         font-size: 3.0vw; /* Adjust size as needed */
-    }
-    .flashcard-title {
-        font-size: 6.0vw; /* Large font for the verb */
-    }
-    .flashcard-sentence {
-        font-size: 2.2vw; /* Adjust size as needed */
-        max-width: 45vw;
-    }
-    .flashcard-list {
-        font-size: 2.2vw; /* Adjust size as needed */
     }
   }
 
@@ -178,17 +121,6 @@
             perspective: 600px;
             margin-top: 15vw;
         }
-        .flashcard-title {
-            font-size: 10.0vw;
-        }
-        .flashcard-sentence {
-            font-size: 3.7vw;
-            max-width: 45vw;
-        }
-        .flashcard-list {
-            font-size: 3.7vw;
-        }
-
         .front::after {
             font-size: 6.0vw; /* Adjust size as needed */
         }
