@@ -10,7 +10,10 @@ body, html {
     font-size: large;
     position: relative;
     margin: auto;
-  }
+    min-height: 100vh; /* Minimum height of viewport */
+    display: flex;
+    flex-direction: column;
+}
 
   .wrapper{
     color: #333; /* Dark grey color for text */
@@ -19,7 +22,15 @@ body, html {
     width: 90%;
     position: relative;
     margin: auto;
+    flex: 1;
   }
+
+  .footer {
+    color:  #333;
+    text-align: center;
+    line-height: 50px; /* Adjust to match your footer height */
+    position: relative;
+}
 
   @media only screen and (max-width: 600px) {
     .body {
