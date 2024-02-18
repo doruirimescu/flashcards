@@ -24,4 +24,14 @@
     font-family: 'IM Fell English SC';
     font-size: 3vw;
     text-align: center;
+    margin-top: 1vw;
 }
+
+/* ----------- iPhone SE ----------- */
+    /* Portrait and Landscape */
+    @media only screen
+    and (-webkit-device-pixel-ratio: 2) {
+        #welcome {
+            font-size: 4.5vw;
+        }
+    }
