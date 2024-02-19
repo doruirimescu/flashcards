@@ -1,4 +1,7 @@
-# <img src="./public/assets/logo/logo.jpeg" width="50" height="50"> Language Learning Flashcards Project
+<h1 align="center" style="line-height: 1; margin: 0; padding: 0;">
+  <img src="./public/assets/logo/logo.jpeg" alt="Logo" width="100" height="100"><br>
+  Language Learning Flashcards Project
+</h1>
 
 Welcome to the Language Learning Flashcards Project! This tool is designed to help language learners improve their vocabulary through interactive flashcards. Below, you'll find instructions on how to run the project locally for development, deploy it using GitHub Pages, add new flashcards, and suggestions for future improvements.
 
