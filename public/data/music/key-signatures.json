@@ -1,0 +1,49 @@
+{
+    "flashcards": [
+        {
+            "frontImage": "assets/front/music/C.jpg",
+            "backImage": "assets/back/music/C.jpg",
+            "frontContent": "What major and minor scale this is? What are the notes?"
+        },
+        {
+            "frontImage": "assets/front/music/G.jpg",
+            "backImage": "assets/back/music/G.jpg",
+            "frontContent": "What major and minor scale this is? What are the notes?"
+        },
+        {
+            "frontImage": "assets/front/music/D.jpg",
+            "backImage": "assets/back/music/D.jpg",
+            "frontContent": "What major and minor scale this is? What are the notes?"
+        },
+        {
+            "frontImage": "assets/front/music/A.jpg",
+            "backImage": "assets/back/music/A.jpg",
+            "frontContent": "What major and minor scale this is? What are the notes?"
+        },
+        {
+            "frontImage": "assets/front/music/E.jpg",
+            "backImage": "assets/back/music/E.jpg",
+            "frontContent": "What major and minor scale this is? What are the notes?"
+        },
+        {
+            "frontImage": "assets/front/music/B.jpg",
+            "backImage": "assets/back/music/B.jpg",
+            "frontContent": "What major and minor scale this is? What are the notes?"
+        },
+        {
+            "frontImage": "assets/front/music/F#.jpg",
+            "backImage": "assets/back/music/F#.jpg",
+            "frontContent": "What major and minor scale this is? What are the notes?"
+        },
+        {
+            "frontImage": "assets/front/music/C#.jpg",
+            "backImage": "assets/back/music/C#.jpg",
+            "frontContent": "What major and minor scale this is? What are the notes?"
+        },
+        {
+        "frontImage": "assets/front/music/A.jpg",
+        "backImage": "assets/back/music/A.jpg",
+        "frontContent": "What major and minor scale this is? What are the notes?"
+        }
+    ]
+  }

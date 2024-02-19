@@ -19,5 +19,12 @@
             "phrases",
             "all"
         ]
+    },
+    "music": {
+        "name": "music",
+        "sections": [
+            "key-signatures",
+            "all"
+        ]
     }
 }
