@@ -53,6 +53,7 @@ header {
             font-size: 4.5vw;
         }
         #logo {
-            height: 5vw;
+            height: 6vw;
+            width: auto;
         }
     }
