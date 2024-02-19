@@ -6,28 +6,47 @@ const param_topic = params.get('topic');
 let currentFlashcardIndex = 0;
 
 
-async function getAllData() {
-    if (param_type != "all"){
+async function getAllData() { // Assuming param_type and param_topic are parameters of this function
+    if (param_type !== "all") {
         return await getDataForType(param_type);
-    }
-    else {
+    } else {
         const languageData = await getStructure("./data/");
         const sections = languageData[param_topic]["sections"];
-        let dat=[];
-        for (const section of sections) {
+        const fetchPromises = sections.map(section => {
             if (section !== "all") {
-                const sectionFlashcards = await getDataForType(section);
-                dat = dat.concat(sectionFlashcards);
+                return getDataForType(section); // This returns a promise
             }
-        }
+            else {
+                return Promise.resolve([]); // Return an immediately resolved promise with an empty array for consistency
+            }
+        });
+
+        // Wait for all promises to resolve
+        const results = await Promise.all(fetchPromises);
+
+        // Flatten the array of results and concatenate into a single array
+        const dat = results.flat(); // Assuming each call to getDataForType returns an array
         return dat;
     }
 }
 
-async function init(){
-    flashcards = await getAllData();
-    displayFlashcard(currentFlashcardIndex);
 
+async function init(){
+    const progressBarColor = window.getComputedStyle(document.querySelector('.progress-bar')).getPropertyValue('background-color');
+    document.querySelector('.progress-bar').style.backgroundColor = "red";
+
+    flashcards = await getAllData();
+    // preload all images
+    for (const flashcard of flashcards) {
+        preloadImage(flashcard.frontImage);
+        preloadImage(flashcard.backImage);
+
+        // update progress bar
+        updateStats(flashcards.indexOf(flashcard) + 1, flashcards.length, "Preloading images");
+    }
+    document.querySelector('.progress-bar').style.backgroundColor = progressBarColor;
+
+    displayFlashcard(currentFlashcardIndex);
 }
 init();
 
@@ -49,17 +68,15 @@ async function getDataForType(type) {
     }
 }
 
-function updateStats(currentIndex, totalCards) {
+function updateStats(currentIndex, totalCards, text="Cards visited:") {
     const percentage = (currentIndex / totalCards) * 100;
     document.querySelector('.progress-bar').style.width = `${percentage}%`;
-    document.getElementById('cardStats').textContent = `Cards visited: ${currentIndex} / ${totalCards}`;
+    document.getElementById('cardStats').textContent = `${text} ${currentIndex} / ${totalCards}`;
 }
 
 function displayFlashcard(index) {
     if (!flashcards.length) return; // Guard clause in case flashcards are empty or not yet loaded
     const flashcard = flashcards[index];
-    preloadImage(flashcard.frontImage);
-    preloadImage(flashcard.backImage);
     const flashcardContainer = document.getElementById('flashcardContainer');
     flashcardContainer.innerHTML = `
         <div class="front" id="frontFlash"></div>
