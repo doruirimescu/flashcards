@@ -45,6 +45,7 @@
     and (-webkit-min-device-pixel-ratio: 3) {
         .stats {
             font-size: 4.0vw;
+            width: 50vw;
         }
     }
 
