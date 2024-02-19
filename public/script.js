@@ -1,56 +1,43 @@
+import { IS_HOSTED_LOCALLY, GITHUB_FETCH_URL, getLanguageData } from "./config.mjs";
 let flashcards=[];
 const params = new URLSearchParams(window.location.search);
 const param_type = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
+const param_topic = params.get('topic');
 let currentFlashcardIndex = 0;
 
 var languageData = null;
-var currentLanguage = null;
-
-if (localStorage.getItem('selectedLanguage')) {
-    currentLanguage = localStorage.getItem('selectedLanguage')
-}
-else{
-    location.replace('index.html');
-}
-
-if (localStorage.getItem('languageData')) {
-    languageData = localStorage.getItem('languageData')
-    languageData = JSON.parse(languageData);
-}
-else{
-    location.replace('index.html');
-}
-
-if (languageData == null || currentLanguage == null) {
-    location.replace('/index.html');
-}
 
 async function getAllData() {
     if (param_type != "all"){
-        flashcards = await getDataForType(param_type);
-        displayFlashcard(currentFlashcardIndex);
+        return await getDataForType(param_type);
     }
     else {
-        sections = languageData[currentLanguage]["sections"];
+        languageData = await getLanguageData("public");
+        sections = languageData[param_topic]["sections"];
+        let dat=[];
         for (const section of sections) {
             if (section !== "all") {
                 const sectionFlashcards = await getDataForType(section);
-                flashcards = flashcards.concat(sectionFlashcards);
+                dat = dat.concat(sectionFlashcards);
             }
         }
-        displayFlashcard(currentFlashcardIndex);
+        return dat;
     }
 }
+async function init(){
+    flashcards = await getAllData();
+    displayFlashcard(currentFlashcardIndex);
 
-getAllData();
+}
+init();
 
 async function getDataForType(type) {
     var fetch_url = "";
     if (IS_HOSTED_LOCALLY === true) {
-        fetch_url = `./data/${currentLanguage}/${type}.json`;
+        fetch_url = `./data/${param_topic}/${type}.json`;
     }
     else {
-        fetch_url = `${GITHUB_FETCH_URL}${currentLanguage}/${type}.json`;
+        fetch_url = `${GITHUB_FETCH_URL}${param_topic}/${type}.json`;
     }
     try {
         const response = await fetch(fetch_url);

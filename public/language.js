@@ -1,24 +1,7 @@
 var currentLanguage = "";
 var languageData = [];
+import { getLanguageData } from "./config.mjs";
 
-async function getLanguageData() {
-    var fetch_url = "";
-    if (IS_HOSTED_LOCALLY === true) {
-        fetch_url = `./public/data/structure.json`;
-    }
-    else {
-        fetch_url = `${GITHUB_FETCH_URL}structure.json`;
-    }
-    const response = await fetch(fetch_url);
-    const data = await response.json();
-    return data;
-}
-
-function updateWelcome()
-{
-    // set the text of the currentLanguage id
-    // document.getElementById('welcome').textContent = `You are learning ${currentLanguage}`;
-}
 
 function populateLanguageSelection() {
     const selectElement = document.getElementById('language-select');
@@ -50,7 +33,7 @@ function updateCategoryButtons() {
             button.className = 'button';
             button.textContent = section.charAt(0).toUpperCase() + section.slice(1); // Capitalize first letter
             button.onclick = function() {
-                location.href = `public/flashcard.html?type=${section}`;
+                location.href = `public/flashcard.html?type=${section}&topic=${currentLanguage}`;
             };
             container.appendChild(button);
         });
@@ -59,18 +42,15 @@ function updateCategoryButtons() {
 
 async function init()
 {
-    languageData = await getLanguageData();
-    localStorage.setItem('languageData', JSON.stringify(languageData));
+    languageData = await getLanguageData("public");
     populateLanguageSelection();
     updateCategoryButtons();
-    updateWelcome();
 
     // Call this function after populating the language selection and whenever the language changes
     document.getElementById('language-select').addEventListener('change', function() {
         currentLanguage = this.value;
         localStorage.setItem('selectedLanguage', currentLanguage);
         updateCategoryButtons(); // Update buttons based on the newly selected language
-        updateWelcome();
     });
 }
 
