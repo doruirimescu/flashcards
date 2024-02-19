@@ -1,4 +1,4 @@
-export var IS_HOSTED_LOCALLY = false;
+export var IS_HOSTED_LOCALLY = true;
 export const GITHUB_USERNAME = "doruirimescu";
 export const GITHUB_BRANCH = "master";
 export const GITHUB_FETCH_URL = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/language-flashcards/${GITHUB_BRANCH}/public/data/`;

@@ -93,7 +93,7 @@ function displayFlashcard(index) {
 function preloadImage(url) {
     const img = new Image();
     img.src = url;
-    img.loading = "lazy"; // This is for lazy loading
+    img.loading = "eager"; // This is for lazy loading
 }
 
 document.getElementById('nextButton').addEventListener('click', () => {
