@@ -39,11 +39,6 @@
             "frontImage": "assets/front/music/C%23.jpg",
             "backImage": "assets/back/music/C%23.jpg",
             "frontContent": "What major and minor scale this is? What are the notes?"
-        },
-        {
-        "frontImage": "assets/front/music/A.jpg",
-        "backImage": "assets/back/music/A.jpg",
-        "frontContent": "What major and minor scale this is? What are the notes?"
         }
     ]
   }
