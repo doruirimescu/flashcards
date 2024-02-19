@@ -41,7 +41,7 @@ function updateCategoryButtons() {
 
 async function init()
 {
-    structureData = await getStructure("public");
+    structureData = await getStructure("./public/data/");
     populateCategorySelection();
     updateCategoryButtons();
 

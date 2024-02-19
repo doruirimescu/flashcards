@@ -3,10 +3,10 @@ export const GITHUB_USERNAME = "doruirimescu";
 export const GITHUB_BRANCH = "master";
 export const GITHUB_FETCH_URL = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/language-flashcards/${GITHUB_BRANCH}/public/data/`;
 
-export async function getStructure() {
+export async function getStructure(LOCAL_FETCH_URL) {
     var fetch_url = "";
     if (IS_HOSTED_LOCALLY === true) {
-        fetch_url = `/public/data/structure.json`;
+        fetch_url = `${LOCAL_FETCH_URL}structure.json`;
     }
     else {
         fetch_url = `${GITHUB_FETCH_URL}structure.json`;

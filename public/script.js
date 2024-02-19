@@ -11,7 +11,7 @@ async function getAllData() {
         return await getDataForType(param_type);
     }
     else {
-        const languageData = await getStructure();
+        const languageData = await getStructure("./data/");
         const sections = languageData[param_topic]["sections"];
         let dat=[];
         for (const section of sections) {
@@ -46,7 +46,6 @@ async function getDataForType(type) {
     }
     catch (error) {
         console.error('Error:', error);
-        location.replace('/index.html');
     }
 }
 
