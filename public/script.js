@@ -57,7 +57,7 @@ async function init(){
     displayFlashcard(currentFlashcardIndex);
 }
 
-async function getAllData() { // Assuming param_type and param_topic are parameters of this function
+async function getAllData() {
     if (param_type !== "all") {
         return await getDataForType(param_type);
     }
@@ -106,13 +106,11 @@ function preloadImage(url) {
     img.loading = "eager"; // This is for lazy loading
 }
 
-
 function updateStats(currentIndex, totalCards, text="Cards visited:") {
     const percentage = (currentIndex / totalCards) * 100;
     document.querySelector('.progress-bar').style.width = `${percentage}%`;
     document.getElementById('cardStats').textContent = `${text} ${currentIndex} / ${totalCards}`;
 }
-
 
 function displayFlashcard(index) {
     if (!flashcards.length) return; // Guard clause in case flashcards are empty or not yet loaded
