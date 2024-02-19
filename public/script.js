@@ -1,19 +1,18 @@
-import { IS_HOSTED_LOCALLY, GITHUB_FETCH_URL, getLanguageData } from "./config.mjs";
+import { IS_HOSTED_LOCALLY, GITHUB_FETCH_URL, getStructure } from "./config.mjs";
 let flashcards=[];
 const params = new URLSearchParams(window.location.search);
 const param_type = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
 const param_topic = params.get('topic');
 let currentFlashcardIndex = 0;
 
-var languageData = null;
 
 async function getAllData() {
     if (param_type != "all"){
         return await getDataForType(param_type);
     }
     else {
-        languageData = await getLanguageData("public");
-        sections = languageData[param_topic]["sections"];
+        const languageData = await getStructure();
+        const sections = languageData[param_topic]["sections"];
         let dat=[];
         for (const section of sections) {
             if (section !== "all") {
@@ -24,6 +23,7 @@ async function getAllData() {
         return dat;
     }
 }
+
 async function init(){
     flashcards = await getAllData();
     displayFlashcard(currentFlashcardIndex);
@@ -102,3 +102,9 @@ document.getElementById('lastButton').addEventListener('click', () => {
     updateStats(currentFlashcardIndex + 1, flashcards.length);
     displayFlashcard(currentFlashcardIndex);
 });
+
+// Set the
+const indexButton = document.getElementById('index')
+indexButton.onclick = function() {
+    location.href = `../index.html?topic=${param_topic}`;
+}
