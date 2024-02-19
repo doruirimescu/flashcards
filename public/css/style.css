@@ -11,26 +11,29 @@ body, html {
     position: relative;
     margin: auto;
     min-height: 100vh; /* Minimum height of viewport */
-    display: flex;
-    flex-direction: column;
 }
 
   .wrapper{
     color: #333; /* Dark grey color for text */
     font-family: 'IM Fell English SC';
     /* border: 10px solid #e30707; */
-    width: 90%;
+    width: 80%;
     position: relative;
     margin: auto;
     flex: 1;
   }
 
   .footer {
-    color:  #333;
-    text-align: center;
+    color: #333;
     line-height: 50px; /* Adjust to match your footer height */
-    position: relative;
+    position: absolute;
+    left: 50%; /* Position the footer halfway across the screen */
+    bottom: 0;
+    transform: translateX(-50%); /* Shift it back to the left by half its width */
+    width: 100%; /* Optional: If you want the footer to span the whole width */
+    text-align: center; /* Ensure text is centered */
 }
+
 
   @media only screen and (max-width: 600px) {
     .body {
