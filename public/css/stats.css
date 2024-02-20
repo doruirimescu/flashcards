@@ -2,60 +2,34 @@
     margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
-    width: 37.5vw;
     text-align: center;
     font-family: 'IM Fell English SC', serif;
     font-weight: bold;
-    font-size:1.0vw;
+    font-size:1.5rem;
     position: relative;
-}
-
-.progress-bar-container {
-    width: 37.5vw;
-    height: 2.5vh;
-    background-color: #eee;
-    border-radius: 2%;
-    position: relative;
+    margin:auto;
+    width: 50rem;
 }
 
 .progress-bar {
-    height: 100%;
-    margin: 10 px auto;
+    height: 2rem;
+    margin: auto;
+    margin-left:0;
+    margin-top: 1rem;
     background-color: #4CAF50;
     border-radius: 8px;
     transition: width 0.4s ease-in-out;
     position: relative;
 }
+#cardStats{
+    margin-top:1rem;
+}
 
-@media only screen and (max-width: 1000px) {
+
+@media only screen
+and (-webkit-min-device-pixel-ratio: 3) {
     .stats {
-        font-size: 2.0vw;
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    .stats {
-        font-size: 3.0vw;
-    }
-  }
-
-  /* ----------- iPhone X ----------- */
-    /* Portrait and Landscape */
-    @media only screen
-    and (-webkit-min-device-pixel-ratio: 3) {
-        .stats {
-            font-size: 4.0vw;
-            width: 50vw;
-        }
+        width: 80vw; /* Match the child elements */
     }
 
-    /* ----------- iPhone SE ----------- */
-    /* Portrait and Landscape */
-    @media only screen
-    and (-webkit-device-pixel-ratio: 2) {
-        .button {
-            width: 22vw;
-            height: auto;
-            font-size: 4.0vw;
-        }
-    }
+}
