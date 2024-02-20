@@ -1,42 +1,22 @@
 #topic-selection {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2vw;
+    font-size: 2rem;
 }
 #topic-select {
-    font-size: 1.5vw;
+    font-size: 1.5rem;
+}
+#categorySelection {
+    position: relative;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
 }
 
-
-@media only screen and (max-width: 700px) {
-    #topic-selection {
-        font-size: 2.5vw;
-    }
-    #topic-select {
-        font-size: 2.0vw;
-    }
-  }
-
-  /* ----------- iPhone X ----------- */
-    /* Portrait and Landscape */
-    @media only screen
-    and (-webkit-min-device-pixel-ratio: 3) {
-        #topic-selection {
-            font-size: 3.5vw;
-        }
-        #topic-select {
-            font-size: 3.0vw;
-        }
-    }
-
-/* ----------- iPhone SE ----------- */
-    /* Portrait and Landscape */
-    @media only screen
-    and (-webkit-device-pixel-ratio: 2) {
-        #topic-selection {
-            font-size: 4.0vw;
-        }
-        #topic-select {
-            font-size: 3.5vw;
-        }
-    }
+#category-select {
+    font-size: 1.5rem;
+}

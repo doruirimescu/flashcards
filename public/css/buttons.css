@@ -1,108 +1,35 @@
 button {
     background-color: #007bff; /* Blue background */
     color: #f0f0f0; /* White text */
-    padding: 10px 10px; /* Padding around text */
     border: none; /* Remove default border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Cursor changes to pointer on hover */
     transition: background-color 0.3s ease; /* Smooth background color change on hover */
     position: relative;
-    width: clamp(8vw, 10vw, 12vw);
+    width: auto;
     height: auto;
-    margin: 0 0.6vw;
+    margin: 0 0.1rem;
+    padding: 0.5rem 1.0rem; /* Updated padding for better touch */
     font-family: 'IM Fell English SC', serif;
-    font-size: 1.5vw;
-    margin: 0px;
   }
 
-    button:hover {
+#start-button{
+    font-size:1.5rem;
+}
+
+button:hover {
         background-color: #0056b3; /* Darker shade of blue on hover */
     }
 
-    button:active {
+button:active {
         background-color: #004099; /* Even darker shade of blue when active/clicked */
     }
 
-    .icon-button {
-        width: 3vw;
-        height: 3vw;
-        border-radius: 30%;
+.icon-button {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 1rem;
         text-align: center;
-        /*maintain line */
-    }
-
-    @media only screen and (max-width: 1500px) {
-        .icon-button {
-            width: 5vw;
-            height: 5vw;
-            border-radius: 30%;
-            font-size:3.0vw;
-            line-height: 2vw;
-        }
-      }
-
-  @media only screen and (max-width: 1000px) {
-    .button {
-        width: 11vw;
-        font-size: 2.0vw;
-    }
-    .icon-button {
-        width: 5vw;
-        height: 5vw;
-        border-radius: 30%;
-        font-size:3.0vw;
-    }
-  }
-
-  @media only screen and (max-width: 700px) {
-    .button {
-        width: 12.0vw;
-        font-size: 2.2vw;
-    }
-
-    .icon-button {
-        width: 5vw;
-        height: 5vw;
-        border-radius: 30%;
-        font-size:3.0vw;
-        line-height: 1vw;
-    }
-  }
-
-  /* ----------- iPhone X ----------- */
-    /* Portrait and Landscape */
-    @media only screen
-    and (-webkit-min-device-pixel-ratio: 3) {
-        .button {
-            width: 20vw;
-            height: auto;
-            font-size: 3.5vw;
-        }
-
-        .icon-button {
-            width: 12vw;
-            height: 12vw;
-            border-radius: 30%;
-            font-size: 6.5vw;
-            line-height: 1vw;
-        }
-    }
-
-/* ----------- iPhone SE ----------- */
-    /* Portrait and Landscape */
-    @media only screen
-    and (-webkit-device-pixel-ratio: 2) {
-        .button {
-            width: 22vw;
-            height: auto;
-            font-size: 4.0vw;
-        }
-
-        .icon-button {
-            width: 13.5vw;
-            height: 13.5vw;
-            border-radius: 30%;
-            font-size: 7.5vw;
-            line-height: 1vw;
-        }
+        font-size: 2rem;
+        margin:0;
     }

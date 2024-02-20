@@ -3,19 +3,22 @@
     margin: 0;
     padding: 0;
 }
+
+
+html {
+    font-size: 16px; /* Default base size */
+}
+
 body, html {
     background-color: #f0f0f0;
     color: #333; /* Dark grey color for text */
     font-family: 'IM Fell English SC', serif;
-    font-size: large;
     position: relative;
     margin: auto;
     min-height: 100vh; /* Minimum height of viewport */
 }
 
   .wrapper{
-    color: #333; /* Dark grey color for text */
-    font-family: 'IM Fell English SC';
     /* border: 10px solid #e30707; */
     width: 80%;
     position: relative;
@@ -24,7 +27,6 @@ body, html {
   }
 
   .footer {
-    color: #333;
     line-height: 50px; /* Adjust to match your footer height */
     position: absolute;
     left: 50%; /* Position the footer halfway across the screen */
@@ -34,9 +36,37 @@ body, html {
     text-align: center; /* Ensure text is centered */
 }
 
-
-  @media only screen and (max-width: 600px) {
-    .body {
-        min-width: 650px;
+@media only screen and (max-width: 1000px) {
+    html {
+        font-size: 10px;
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+    body
+    {
+        min-width: 50rem;
+    }
+  }
+
+
+  /* ----------- iPhone X ----------- */
+    /* Portrait and Landscape */
+@media only screen
+and (-webkit-min-device-pixel-ratio: 3) {
+    html {
+        font-size: 6px;
+    }
+}
+
+/* ----------- iPhone SE ----------- */
+    /* Portrait and Landscape */
+@media only screen
+and (-webkit-device-pixel-ratio: 2) {
+    html {
+        font-size: 10px;
+    }
+}

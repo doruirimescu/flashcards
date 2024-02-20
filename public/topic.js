@@ -22,21 +22,38 @@ function populateCategorySelection() {
 }
 
 function updateCategoryButtons() {
+    const selectElement = document.getElementById('category-select');
+    document.querySelector('label[for="category-select"]').textContent = 'Select a category:';
+    document.getElementById("category-select").hidden = false;
+    document.getElementById('start-button').hidden = false;
+    selectElement.value = ''; // Clear the select element
     const selectedTopic = structureData[param_topic];
-    const container = document.getElementById('category-buttons');
-    container.innerHTML = ''; // Clear existing buttons
 
     if (selectedTopic) {
         selectedTopic.sections.forEach(section => {
-            const button = document.createElement('button');
-            button.className = 'button';
-            button.textContent = section.charAt(0).toUpperCase() + section.slice(1); // Capitalize first letter
-            button.onclick = function() {
-                location.href = `public/flashcard.html?type=${section}&topic=${param_topic}`;
-            };
-            container.appendChild(button);
+            const option = document.createElement('option');
+            option.value = section;
+            option.textContent = section; // Capitalize first letter
+            selectElement.appendChild(option);
         });
+        selectElement.value = selectedTopic.sections[0]; // Set the first section as selected
+
+        // set start button
+        const startButton = document.getElementById('start-button');
+        startButton.onclick = function() {
+            location.href = `public/flashcard.html?type=${selectElement.value}&topic=${param_topic}`;
+        };
+        // if selectedTopic is empty, disable start button
+        if (selectedTopic.sections.length == 0) {
+            startButton.hidden = true;
+            document.querySelector('label[for="category-select"]').textContent = 'No content available';
+            document.getElementById("category-select").hidden = true;
+        }
+        console.log(selectedTopic.sections.length)
     }
+    else {
+    }
+
 }
 
 getStructure("./public/data/").then((data) => {

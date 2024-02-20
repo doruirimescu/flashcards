@@ -1,28 +1,8 @@
-#categorySelection {
-    position: relative;
-    color: #333; /* Dark grey color for text */
-    font-family: 'IM Fell English SC';
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.category {
-    display: grid;
-    width: 60%;
-    position: relative;
-    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
-    row-gap: 5%;
-    column-gap: 5%;
-    justify-content: center;
-    margin:auto;
-}
-
 #welcome {
     font-family: 'IM Fell English SC';
-    font-size: 3vw;
+    font-size: 3rem;
     margin:auto;
-    margin-top: 1vw;
+    margin-top: 1rem;
     position: relative;
 }
 
@@ -39,32 +19,9 @@ header {
 
 #logo {
     position: absolute;
+    top:1rem;
     left: 10%; /* Aligns with the left edge of the .wrapper */
-    height: 3vw; /* Example size, adjust as needed */
+    height: 4rem; /* Example size, adjust as needed */
     width: auto;
     border-radius: 10%;
 }
-
-/* ----------- iPhone SE ----------- */
-    /* Portrait and Landscape */
-    @media only screen
-    and (-webkit-device-pixel-ratio: 2) {
-        #welcome {
-            font-size: 4.5vw;
-        }
-        #logo {
-            width: 6vw;
-            height: 6vw;
-        }
-    }
-
-    @media only screen
-    and (-webkit-device-pixel-ratio: 3) {
-        #welcome {
-            font-size: 4.5vw;
-        }
-        #logo {
-            width: 6vw;
-            height: 6vw;
-        }
-    }
