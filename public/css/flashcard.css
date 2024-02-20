@@ -89,16 +89,16 @@
 }
 
 @media only screen
-and (-webkit-min-device-pixel-ratio: 3)
+and (-webkit-device-pixel-ratio: 3)
 and (orientation: portrait) {
     .flashcard-container {
-        width: 40rem;
+        width: 42rem;
         height: 57rem;
     }
 }
 
 @media only screen
-and (-webkit-min-device-pixel-ratio: 2)
+and (-webkit-device-pixel-ratio: 2)
 and (orientation: portrait) {
     .flashcard-container {
         width: 42rem;
