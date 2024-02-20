@@ -26,10 +26,10 @@ button:active {
     }
 
 .icon-button {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 1rem;
-        text-align: center;
-        font-size: 2rem;
-        margin:0;
-    }
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    margin:0;
+}

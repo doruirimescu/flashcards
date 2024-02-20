@@ -21,6 +21,24 @@
     transition: width 0.4s ease-in-out;
     position: relative;
 }
+
 #cardStats{
     margin-top:1rem;
+}
+
+
+@media only screen
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+    .stats {
+        width: 45rem;
+    }
+}
+
+@media only screen
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+    .stats {
+        width: 42rem;
+    }
 }

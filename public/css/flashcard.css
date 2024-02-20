@@ -12,20 +12,20 @@
 
 
 .flashcard-container.flipped .front:hover::after {
-visibility: hidden;
-opacity: 0;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .flashcard-container:hover {
-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .flashcard-container.flipped .front {
-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .flashcard-container.flipped .back {
-transform: rotateY(360deg);
+    transform: rotateY(360deg);
 }
 
 .front, .back {
@@ -92,16 +92,16 @@ transform: rotateY(360deg);
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: portrait) {
     .flashcard-container {
-        height:60rem;
+        width: 45rem;
+        height: 60rem;
     }
 }
 
 @media only screen
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: landscape) {
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
     .flashcard-container {
-        margin-top: 2rem;
-        width:60rem;
-        height:30rem;
+        width: 42rem;
+        height: 50rem;
     }
 }
