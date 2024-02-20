@@ -39,17 +39,13 @@ function updateCategoryButtons() {
     }
 }
 
-async function init()
-{
-    structureData = await getStructure("./public/data/");
+getStructure("./public/data/").then((data) => {
+    structureData = data;
     populateCategorySelection();
     updateCategoryButtons();
 
-    // Call this function after populating the language selection and whenever the language changes
     document.getElementById('topic-select').addEventListener('change', function() {
         param_topic = this.value;
         updateCategoryButtons(); // Update buttons based on the newly selected language
     });
-}
-
-init();
+});

@@ -37,25 +37,15 @@ indexButton.onclick = function() {
 }
 
 // Async function to initialize the flashcards
-init();
-
-async function init(){
-    const progressBarColor = window.getComputedStyle(document.querySelector('.progress-bar')).getPropertyValue('background-color');
-    document.querySelector('.progress-bar').style.backgroundColor = "red";
-
-    flashcards = await getAllData();
+getAllData().then((retrieved_flashcards) => {
     // preload all images
+    flashcards = retrieved_flashcards;
     for (const flashcard of flashcards) {
         preloadImage(flashcard.frontImage);
         preloadImage(flashcard.backImage);
-
-        // update progress bar
-        updateStats(flashcards.indexOf(flashcard) + 1, flashcards.length, "Preloading images");
     }
-    document.querySelector('.progress-bar').style.backgroundColor = progressBarColor;
-
     displayFlashcard(currentFlashcardIndex);
-}
+});
 
 async function getAllData() {
     if (param_type !== "all") {
