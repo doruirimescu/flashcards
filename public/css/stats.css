@@ -52,7 +52,7 @@
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: portrait) {
     .stats {
-        width: 45rem;
+        width: 40rem;
     }
 }
 

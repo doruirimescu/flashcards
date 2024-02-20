@@ -92,8 +92,8 @@
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: portrait) {
     .flashcard-container {
-        width: 45rem;
-        height: 60rem;
+        width: 40rem;
+        height: 57rem;
     }
 }
 
