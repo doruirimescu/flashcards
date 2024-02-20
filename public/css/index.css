@@ -1,27 +1,32 @@
-#welcome {
-    font-family: 'IM Fell English SC';
-    font-size: 3rem;
-    margin:auto;
-    margin-top: 1rem;
-    position: relative;
+#selectionArea {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left:1rem;
+    width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 header {
     position: relative;
     width: 100%;
-    margin:auto;
     display: flex;
     justify-content: center; /* Keeps the header content centered */
     align-items: center;
-
+    font-family: 'IM Fell English SC';
+    font-size: 1.5rem;
+    flex-direction: column; /* Aligns the logo and nav vertically */
 }
 
 #logo {
-    position: absolute;
-    top:1rem;
-    left: 10%; /* Aligns with the left edge of the .wrapper */
-    height: 4rem; /* Example size, adjust as needed */
-    width: auto;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 10rem; /* Maximum size */
+    max-height: 4rem; /* Adjust based on your preference */
+    margin-bottom: 1rem; /* Space between logo and heading */
+    margin-top: 1rem;
     border-radius: 10%;
 }

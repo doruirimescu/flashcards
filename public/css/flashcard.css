@@ -88,5 +88,20 @@ transform: rotateY(360deg);
     position: absolute;
 }
 
-  /* ----------- iPhone X ----------- */
-/* Portrait and Landscape */
+@media only screen
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+    .flashcard-container {
+        height:60rem;
+    }
+}
+
+@media only screen
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+    .flashcard-container {
+        margin-top: 2rem;
+        width:60rem;
+        height:30rem;
+    }
+}

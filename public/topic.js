@@ -23,10 +23,12 @@ function populateCategorySelection() {
 
 function updateCategoryButtons() {
     const selectElement = document.getElementById('category-select');
-    document.querySelector('label[for="category-select"]').textContent = 'Select a category:';
+    document.querySelector('label[for="category-select"]').textContent = 'Category:';
     document.getElementById("category-select").hidden = false;
     document.getElementById('start-button').hidden = false;
-    selectElement.value = ''; // Clear the select element
+    while (selectElement.firstChild) {
+        selectElement.removeChild(selectElement.firstChild);
+    }
     const selectedTopic = structureData[param_topic];
 
     if (selectedTopic) {

@@ -17,7 +17,7 @@
     @media only screen
     and (-webkit-min-device-pixel-ratio: 3) {
         .menu {
-            margin-top: 3.0vw;
+            margin-top: 3.0rem;
         }
     }
 
