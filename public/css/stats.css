@@ -24,12 +24,3 @@
 #cardStats{
     margin-top:1rem;
 }
-
-
-@media only screen
-and (-webkit-min-device-pixel-ratio: 3) {
-    .stats {
-        width: 80vw; /* Match the child elements */
-    }
-
-}

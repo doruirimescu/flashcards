@@ -1,5 +1,5 @@
 .flashcard-container {
-    margin-top: 3vw;
+    margin-top: 5rem;
     margin-left: auto;
     margin-right: auto;
     width: 50rem; /* Match the child elements */
@@ -90,15 +90,3 @@ transform: rotateY(360deg);
 
   /* ----------- iPhone X ----------- */
 /* Portrait and Landscape */
-@media only screen
-and (-webkit-min-device-pixel-ratio: 3) {
-    .flashcard-container {
-        width: 80vw; /* Match the child elements */
-        height: 90vw;
-        perspective: 600px;
-        margin-top: 15vw;
-    }
-    .front::after {
-        font-size: 6.0vw; /* Adjust size as needed */
-    }
-}

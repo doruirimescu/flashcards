@@ -20,7 +20,6 @@ body, html {
 
   .wrapper{
     /* border: 10px solid #e30707; */
-    width: 80%;
     position: relative;
     margin: auto;
     flex: 1;
@@ -73,6 +72,6 @@ and (-webkit-min-device-pixel-ratio: 3) {
 @media only screen
 and (-webkit-device-pixel-ratio: 2) {
     html {
-        font-size: 10px;
+        font-size: 6px;
     }
 }
