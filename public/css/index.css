@@ -48,7 +48,8 @@ header {
 
 /* Optionally, if you want to increase the size of the checkbox */
 #randomize-checkbox {
-    transform: scale(1.5); /* Makes the checkbox larger */
+    width: 1.2rem; /* Width */
+    height: 1.2rem; /* Height */
     margin-left: 10px; /* Ensures some space between checkbox and label */
     cursor: pointer; /* Indicates the checkbox is clickable */
 }
