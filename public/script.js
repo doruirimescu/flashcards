@@ -44,7 +44,6 @@ getAllData().then((retrievedFlashcards) => {
     flashcards = retrievedFlashcards;
     // filter out the flashcards that don't match the style
     if (paramStyle !== "all") {
-        console.log("FILTERING FOR", paramStyle)
         flashcards = flashcards.filter(flashcard => flashcard.styles.includes(paramStyle));
     }
 
@@ -64,7 +63,9 @@ async function getAllData() {
     }
     else {
         const languageData = await getStructure("./data/");
-        const sections = languageData[paramTopic]["sections"];
+        // get all keys of languageData[paramTopic]["sections"]
+
+        const sections = Object.keys(languageData[paramTopic]["sections"]);
         const fetchPromises = sections.map(section => {
             if (section !== "all") {
                 return getDataForType(section); // This returns a promise
