@@ -93,19 +93,18 @@ header {
     top: 0.5rem;
     margin-bottom: auto;
     line-height: 20px;
-    height: 10px;
     text-align: right;
     border-radius: 50%;
-    font-size: 14px;
+    font-size: 1rem;
     cursor: help;
 }
 
 .info-icon::after {
     content: attr(data-tooltip);
     position: absolute;
-    /* left:50%;
+    left:100%;
     top: auto;
-    transform: translateX(-50%); */
+    transform: translateX(-100%);
     overflow-wrap:normal;
     z-index: 1;
     background-color: #666;

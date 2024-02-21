@@ -6,12 +6,20 @@ var paramCategory = null;
 let paramStyle = null;
 var shouldRandomize = false;
 
+const ELEMENT_TOPIC_LABEL = document.querySelector('label[for="topic-select"]');
+const ELEMENT_CATEGORY_LABEL = document.querySelector('label[for="category-select"]');
+const ELEMENT_STYLE_LABEL = document.querySelector('label[for="style-select"]');
+
+
 function initializeContent()
 {
-    document.querySelector('label[for="category-select"]').textContent = 'Category:';
+    ELEMENT_TOPIC_LABEL.textContent = 'Topic:';
+    document.getElementById('topic-select').hidden = false;
+
+    ELEMENT_CATEGORY_LABEL.textContent = 'Category:';
     document.getElementById("category-select").hidden = false;
 
-    document.querySelector('label[for="style-select"]').textContent = 'Graphic Style:';
+    ELEMENT_STYLE_LABEL.textContent = 'Graphic Style:';
     document.getElementById("style-select").hidden = false;
 
     document.querySelector('label[for="randomize-checkbox"]').hidden = false;
