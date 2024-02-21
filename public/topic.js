@@ -11,7 +11,7 @@ function initializeContent()
     document.querySelector('label[for="category-select"]').textContent = 'Category:';
     document.getElementById("category-select").hidden = false;
 
-    document.querySelector('label[for="style-select"]').textContent = 'Style:';
+    document.querySelector('label[for="style-select"]').textContent = 'Graphic Style:';
     document.getElementById("style-select").hidden = false;
 
     document.querySelector('label[for="randomize-checkbox"]').hidden = false;

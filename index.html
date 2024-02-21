@@ -20,28 +20,26 @@
     </header>
     <div class="wrapper" style="text-align: center;">
         <div id="selectionArea">
-            <div id="topic-selection">
+            <div id="selection">
                 <label for="topic-select">Topic:</label>
-                <select id="topic-select">
-                <!-- Options will be added dynamically by JavaScript -->
-                </select>
+                <span class="info-icon" data-tooltip="Select the main subject you want to learn about.">ℹ️</span>
+                <select id="topic-select"></select>
             </div>
 
-            <div id="categorySelection">
+            <div id="selection">
                 <label for = "category-select"></label>
-                <select id="category-select">
-                </select>
+                <span class="info-icon" data-tooltip="Choose a category based on its availability for the selected topic. If you choose all, all the available cards will be selected.">ℹ️</span>
+                <select id="category-select"></select>
             </div>
 
-            <div id="styleSelection">
-                <label for = "style-select">Style:</label>
-                <select id="style-select">
-                </select>
+            <div id="selection">
+                    <label for = "style-select"></label>
+                    <span class="info-icon" data-tooltip="Filter the selected cards by their graphic style.">ℹ️</span>
+                <select id="style-select"></select>
             </div>
 
             <div id="randomizeSelection">
                 <label for="randomize-checkbox">Randomize Cards</label>
-
                 <input type="checkbox" id="randomize-checkbox" checked>
             </div>
             <button id="start-button" class="button" >Start</button>
