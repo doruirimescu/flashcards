@@ -1,9 +1,12 @@
 {
     "flashcards": [
-      {
-        "frontImage": "assets/front/english/come_off.jpg",
-        "backImage": "assets/back/english/come_off.jpg",
-        "frontContent": "He [...] as confident during his presentation."
-      }
+        {
+            "frontImage": "assets/front/english/come_off.jpg",
+            "backImage": "assets/back/english/come_off.jpg",
+            "frontContent": "He [...] as confident during his presentation.",
+            "styles": [
+                "eerie"
+            ]
+        }
     ]
-  }
+}
