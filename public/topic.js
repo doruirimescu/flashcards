@@ -1,7 +1,7 @@
-var structureData = [];
 import { getStructure } from "./config.mjs";
+var structureData = [];
+var should_randomize = false;
 const params = new URLSearchParams(window.location.search);
-
 let param_topic = params.get('topic');
 
 function populateCategorySelection() {
@@ -43,7 +43,7 @@ function updateCategoryButtons() {
         // set start button
         const startButton = document.getElementById('start-button');
         startButton.onclick = function() {
-            location.href = `public/flashcard.html?type=${selectElement.value}&topic=${param_topic}`;
+            location.href = `public/flashcard.html?type=${selectElement.value}&topic=${param_topic}&randomize=${should_randomize}`;
         };
         // if selectedTopic is empty, disable start button
         if (selectedTopic.sections.length == 0) {
@@ -67,4 +67,14 @@ getStructure("./public/data/").then((data) => {
         param_topic = this.value;
         updateCategoryButtons(); // Update buttons based on the newly selected language
     });
+});
+
+
+const randomizeCheckbox = document.getElementById('randomize-checkbox');
+should_randomize = randomizeCheckbox.checked;
+// Add an event listener to the checkbox for the 'change' event
+randomizeCheckbox.addEventListener('change', function() {
+    // Update is_randomize based on whether the checkbox is checked
+    should_randomize = this.checked;
+    console.log(should_randomize);
 });

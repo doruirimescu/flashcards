@@ -5,6 +5,7 @@ let flashcards=[];
 const params = new URLSearchParams(window.location.search);
 const param_type = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
 const param_topic = params.get('topic');
+const param_randomize = params.get('randomize');
 let currentFlashcardIndex = 0;
 
 // Instant event listeners
@@ -43,6 +44,9 @@ getAllData().then((retrieved_flashcards) => {
     for (const flashcard of flashcards) {
         preloadImage(flashcard.frontImage);
         preloadImage(flashcard.backImage);
+    }
+    if (param_randomize === "true") {
+        flashcards = flashcards.sort(() => Math.random() - 0.5);
     }
     displayFlashcard(currentFlashcardIndex);
 });

@@ -30,3 +30,25 @@ header {
     margin-top: 1rem;
     border-radius: 10%;
 }
+
+#randomizeSelection {
+    text-align: left;
+    margin: 20px auto; /* Centering it horizontally */
+    font-size: 1.5rem; /* Matching the font size of your selects */
+    display: flex; /* Using flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center the contents */
+    width: 80%; /* Matching the width of your selectionArea */
+}
+
+#randomizeSelection label {
+    margin-left: 10px; /* Space between checkbox and label */
+    cursor: pointer; /* Indicates the label is clickable */
+}
+
+/* Optionally, if you want to increase the size of the checkbox */
+#randomize-checkbox {
+    transform: scale(1.5); /* Makes the checkbox larger */
+    margin-left: 10px; /* Ensures some space between checkbox and label */
+    cursor: pointer; /* Indicates the checkbox is clickable */
+}
