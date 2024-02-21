@@ -1,14 +1,47 @@
 import { getStructure } from "./config.mjs";
 var structureData = [];
+
+var paramTopic = null;
+var paramCategory = null;
+let paramStyle = null;
 var shouldRandomize = false;
-const params = new URLSearchParams(window.location.search);
-let paramTopic = params.get('topic');
 
-function populateCategorySelection() {
+function initializeContent()
+{
+    document.querySelector('label[for="category-select"]').textContent = 'Category:';
+    document.getElementById("category-select").hidden = false;
+
+    document.querySelector('label[for="style-select"]').textContent = 'Style:';
+    document.getElementById("style-select").hidden = false;
+
+    document.querySelector('label[for="randomize-checkbox"]').hidden = false;
+    document.getElementById("randomize-checkbox").hidden = false;
+
+    const startButton = document.getElementById('start-button');
+    startButton.hidden = false;
+}
+
+function noContent() {
+    const startButton = document.getElementById('start-button');
+    startButton.hidden = true;
+
+    document.querySelector('label[for="category-select"]').textContent = 'No content available';
+    document.getElementById("category-select").hidden = true;
+
+    document.querySelector('label[for="style-select"]').textContent = '';
+    document.getElementById("style-select").hidden = true;
+
+    document.querySelector('label[for="randomize-checkbox"]').hidden = true;
+    document.getElementById("randomize-checkbox").hidden = true;
+}
+
+function populateTopicSelection() {
     const selectElement = document.getElementById('topic-select');
+    paramTopic = selectElement.value || Object.keys(structureData)[0];
 
-    if (!paramTopic) {
-        paramTopic = Object.keys(structureData)[0];
+    // remove children
+    while (selectElement.firstChild) {
+        selectElement.removeChild(selectElement.firstChild);
     }
 
     for (var key in structureData){
@@ -21,51 +54,78 @@ function populateCategorySelection() {
     selectElement.value = paramTopic; // Set the current language as selected
 }
 
-function updateCategoryButtons() {
-    const selectElement = document.getElementById('category-select');
-    document.querySelector('label[for="category-select"]').textContent = 'Category:';
-    document.getElementById("category-select").hidden = false;
-    document.getElementById('start-button').hidden = false;
-    while (selectElement.firstChild) {
-        selectElement.removeChild(selectElement.firstChild);
+function populateCategorySelection() {
+    const categoryElement = document.getElementById('category-select');
+    while (categoryElement.firstChild) {
+        categoryElement.removeChild(categoryElement.firstChild);
     }
     const selectedTopic = structureData[paramTopic];
-
-    if (selectedTopic) {
-        selectedTopic.sections.forEach(section => {
+    const sections = Object.keys(selectedTopic.sections);
+    if (sections.length != 0) {
+        sections.forEach(section => {
             const option = document.createElement('option');
             option.value = section;
             option.textContent = section; // Capitalize first letter
-            selectElement.appendChild(option);
+            categoryElement.appendChild(option);
         });
-        selectElement.value = selectedTopic.sections[0]; // Set the first section as selected
-
-        // set start button
-        const startButton = document.getElementById('start-button');
-        startButton.onclick = function() {
-            location.href = `public/flashcard.html?type=${selectElement.value}&topic=${paramTopic}&randomize=${shouldRandomize}`;
-        };
+        categoryElement.value = sections[0]; // Set the first section as selected
         // if selectedTopic is empty, disable start button
-        if (selectedTopic.sections.length == 0) {
-            startButton.hidden = true;
-            document.querySelector('label[for="category-select"]').textContent = 'No content available';
-            document.getElementById("category-select").hidden = true;
-        }
+        paramCategory = sections[0];
+
     }
     else {
+        paramCategory = null;
+        noContent();
+    }
+}
+
+function populateStyleSelection() {
+    if (!paramCategory) {
+        return;
+    }
+    const selectedTopic = structureData[paramTopic];
+    // we need to look into the values of the sections to see if there are any styles
+    const styles = selectedTopic.sections[paramCategory];
+    const styleElement = document.getElementById('style-select');
+
+    while (styleElement.firstChild) {
+        styleElement.removeChild(styleElement.firstChild);
     }
 
+    styles.forEach(style => {
+        const option = document.createElement('option');
+        option.value = style;
+        option.textContent = style;
+        styleElement.appendChild(option);
+    });
 }
+
+
+// whenever topic is changed, update the category selection
+document.getElementById('topic-select').addEventListener('change', function() {
+    paramTopic = this.value;
+    initializeContent();
+    populateCategorySelection();
+    populateStyleSelection();
+});
+
+// whenever category is changed, update the style selection
+document.getElementById('category-select').addEventListener('change', function() {
+    paramCategory = this.value;
+    populateStyleSelection();
+});
+
+// whenever style is changed, update the style selection
+document.getElementById('style-select').addEventListener('change', function() {
+    paramStyle = this.value;
+});
 
 getStructure("./public/data/").then((data) => {
     structureData = data;
+    initializeContent();
+    populateTopicSelection();
     populateCategorySelection();
-    updateCategoryButtons();
-
-    document.getElementById('topic-select').addEventListener('change', function() {
-        paramTopic = this.value;
-        updateCategoryButtons(); // Update buttons based on the newly selected language
-    });
+    populateStyleSelection();
 });
 
 
@@ -75,5 +135,11 @@ shouldRandomize = randomizeCheckbox.checked;
 randomizeCheckbox.addEventListener('change', function() {
     // Update is_randomize based on whether the checkbox is checked
     shouldRandomize = this.checked;
-    console.log(shouldRandomize);
 });
+
+// set start button
+document.getElementById('start-button').onclick = function() {
+    location.href = `public/flashcard.html?type=${paramCategory}&topic=${paramTopic}&randomize=${shouldRandomize}&style=${paramStyle}`;
+};
+
+initializeContent();

@@ -1,31 +1,53 @@
 {
     "finnish": {
         "name": "finnish",
-        "sections": [
-            "adjectives",
-            "nouns",
-            "verbs",
-            "phrases",
-            "joka",
-            "all"
-        ]
+        "sections": {
+            "adjectives": [
+                "eerie",
+                "cute"
+            ],
+            "nouns": [
+                "eerie"
+            ],
+            "verbs": [
+                "eerie"
+            ],
+            "phrases": [
+                "eerie"
+            ],
+            "joka": [
+                "eerie"
+            ],
+            "all": [
+                "eerie",
+                "cute"
+            ]
+        }
     },
     "german": {
         "name": "german",
-        "sections": []
+        "sections": {}
     },
     "english": {
         "name": "english",
-        "sections": [
-            "phrases",
-            "all"
-        ]
+        "sections": {
+            "phrases": [
+                "eerie"
+            ],
+            "all": [
+                "eerie"
+            ]
+        }
     },
     "music": {
         "name": "music",
-        "sections": [
-            "key-signatures",
-            "all"
-        ]
+        "sections": {
+            "key-signatures": [
+                "eerie"
+            ],
+            "all": [
+                "eerie"
+            ]
+        }
     }
 }

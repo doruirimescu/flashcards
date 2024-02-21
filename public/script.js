@@ -34,13 +34,20 @@ document.getElementById('lastButton').addEventListener('click', () => {
 
 const indexButton = document.getElementById('index')
 indexButton.onclick = function() {
-    location.href = `../index.html?topic=${paramTopic}`;
+    location.href = `../index.html`;
 }
 
 // Async function to initialize the flashcards
 getAllData().then((retrievedFlashcards) => {
     // preload all images
     flashcards = retrievedFlashcards;
+
+    // var style = ""
+    // for (const flashcard of flashcards) {
+    //     let modifiedPath = flashcard.frontImage.replace(/([^\/]+)(\.jpg)$/i, `${style}$1$2`);
+    //     console.log(modifiedPath);
+    // }
+
     for (const flashcard of flashcards) {
         preloadImage(flashcard.frontImage);
         preloadImage(flashcard.backImage);
