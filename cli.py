@@ -15,9 +15,14 @@ class PathManager:
         self.front_image = f"{self.front_dir}/{name}.jpg"
         self.category_json = f"{self.data_dir}/{category}.json"
         self.structure_json = f"./public/data/structure.json"
-        print(f"Back image path: {self.back_image}")
-        print(f"Front image path: {self.front_image}")
+        self.count_json = f"./public/data/count.json"
 
+    def __str__(self) -> str:
+        return f"back_dir: {self.back_dir}\nfront_dir: {self.front_dir}\ndata_dir: {self.data_dir}\nback_image: {self.back_image}\nfront_image: {self.front_image}\ncategory_json: {self.category_json}\nstructure_json: {self.structure_json}"
+
+    def get_structure_json(self):
+        with open(self.structure_json, 'r') as f:
+            return json.load(f)
 class CreateEntry:
     def __init__(self, name, topic, category, style, content):
         self.name = name
@@ -134,6 +139,25 @@ class DeleteCategory:
         print(f"Topic: {self.topic}")
         print(f"Category: {self.category}")
 
+
+class CardsCounter:
+    def __init__(self, topic, category, style):
+        self.topic = topic
+        self.category = category
+        self.style = style
+        self.path = PathManager(topic, None, category)
+
+    def count(self):
+        with open(self.path.category_json, 'r') as f:
+            category_data = json.load(f)
+
+        # count the number of cards with a specific style
+        style_count = 0
+        for card in category_data['flashcards']:
+            if self.style in card['styles']:
+                style_count += 1
+        return style_count
+
 class DeleteCard:
     def __init__(self, name, topic, category):
         self.name = name
@@ -148,6 +172,39 @@ class DeleteCard:
 def create_entry(args):
     create = CreateEntry(args.name, args.topic, args.category, args.style, args.content)
     create.create()
+
+def count_cards(_):
+    total_count = dict()
+
+    pm = PathManager("", "", "")
+    # explore data folder, and get the names of the subfolders as topics
+    topics = [f.name for f in os.scandir(pm.data_dir) if f.is_dir()]
+
+    topics_count_dict = dict()
+    # for topic in topics, explore the names of the json files as categories
+    for topic in topics:
+        topics_count_dict[topic] = {"total":0, "categories": {}}
+        categories = [f.name for f in os.scandir(f"{pm.data_dir}/{topic}") if f.is_file()]
+        # remove the .json extension
+        categories = [c.split(".")[0] for c in categories]
+        total_count[topic] = dict()
+
+        # for each category, count the number of flashcards
+        for category in categories:
+            total_count[topic][category] = dict()
+            topics_count_dict[topic]["categories"][category] = {"total":0, "styles": {}}
+            for style in pm.get_structure_json()[topic]["sections"]["all"]:
+                counter = CardsCounter(topic, category, style)
+                style_count = counter.count()
+                topics_count_dict[topic]["total"] += style_count
+                topics_count_dict[topic]["categories"][category]["total"] += style_count
+                if style_count > 0:
+                    topics_count_dict[topic]["categories"][category]["styles"][style] = style_count
+
+    print(topics_count_dict)
+    # write the count to a json file
+    with open(pm.count_json, 'w') as f:
+        json.dump(topics_count_dict, f, indent=4)
 
 def delete_topic(args):
     print("Deleting a topic")
@@ -176,6 +233,11 @@ def parse_args():
     create_parser.add_argument('--style', nargs='+', help='List of styles for the flashcard')
     create_parser.add_argument('--content', type=str, required=True, help='Content of the flashcard')
     create_parser.set_defaults(func=create_entry)
+
+    # Count cards subcommand
+    count_cards_parser = subparsers.add_parser('count', help='Count the cards and create statistics')
+    count_cards_parser.set_defaults(func=count_cards)
+
 
     # Delete topic subcommand
     delete_topic_parser = subparsers.add_parser('delete_topic', help='Delete a topic')

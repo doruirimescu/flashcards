@@ -1,0 +1,60 @@
+{
+    "english": {
+        "total": 1,
+        "categories": {
+            "phrases": {
+                "total": 1,
+                "styles": {
+                    "eerie": 1
+                }
+            }
+        }
+    },
+    "music": {
+        "total": 8,
+        "categories": {
+            "key-signatures": {
+                "total": 8,
+                "styles": {
+                    "eerie": 8
+                }
+            }
+        }
+    },
+    "finnish": {
+        "total": 23,
+        "categories": {
+            "phrases": {
+                "total": 4,
+                "styles": {
+                    "eerie": 4
+                }
+            },
+            "adjectives": {
+                "total": 5,
+                "styles": {
+                    "eerie": 4,
+                    "cute": 1
+                }
+            },
+            "nouns": {
+                "total": 2,
+                "styles": {
+                    "eerie": 2
+                }
+            },
+            "verbs": {
+                "total": 9,
+                "styles": {
+                    "eerie": 9
+                }
+            },
+            "joka": {
+                "total": 3,
+                "styles": {
+                    "eerie": 3
+                }
+            }
+        }
+    }
+}
