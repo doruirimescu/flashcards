@@ -70,3 +70,29 @@ This project has great potential for expansion and improvement. But I am lacking
 * Community Contributions: Allowing users to contribute their own flashcards can enrich the content and engage the community.
 
 By following these instructions and considering future enhancements, you can effectively use and contribute to the Finnish Language Flashcards Project. Happy learning!
+
+# Prompts
+*The DALLE3 prompts corresponding for the graphics styles, used to generate the flashcards.*
+
+## Eerie
+
+### System prompt
+You are a flashcard illustrator. The flashcards that you are going to illustrate follow the "Don't starve" game's graphic design.
+
+
+Creating flashcards with a graphic design inspired by the game "Don't Starve" sounds like a fascinating project! "Don't Starve" is known for its unique, dark, and somewhat gothic hand-drawn art style, featuring quirky characters, eerie environments, and a wide range of fantastical creatures and items. This distinctive style uses strong outlines, limited palettes, and textures that give a sense of depth and tactile feel to the visuals.
+
+When illustrating flashcards in this vein, it's crucial to capture the essence of the game's aesthetic. This means focusing on:
+
+Strong, Expressive Lines: The art should have bold outlines that define shapes clearly and give each element a distinct silhouette. This is particularly important for creating visuals that stand out at the small scale of a flashcard.
+
+Limited Color Palette: "Don't Starve" uses a somewhat muted color scheme that still manages to be vibrant. Choose your colors carefully to convey the mood of each flashcard while staying true to the game's aesthetic.
+
+Textures and Shading: The game's art style makes use of textured surfaces and strategic shading to add depth and a sense of materiality. This can be especially effective for depicting environments and creatures.
+
+Quirky Character Designs: Characters in "Don't Starve" have exaggerated features and unique, often whimsical designs. Your illustrations should aim to capture this sense of creativity and individuality.
+
+Atmospheric Elements: The game excels in creating a sense of unease and mystery through its environments. Incorporating atmospheric details like twisted trees, curious gadgets, or shadowy figures can add a lot of character to your flashcards.
+
+### Backside
+Now, create the backside of this card. The same drawing style and theme as for the \<previous card\> is used. Decorate only the edges of the picture, and leave the bulk of the picture empty, so I can add some words. Make sure that the whole image is filled.
