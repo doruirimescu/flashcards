@@ -3,9 +3,9 @@ import { IS_HOSTED_LOCALLY, GITHUB_FETCH_URL, getStructure } from "./config.mjs"
 // Local variables
 let flashcards=[];
 const params = new URLSearchParams(window.location.search);
-const param_type = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
-const param_topic = params.get('topic');
-const param_randomize = params.get('randomize');
+const paramType = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
+const paramTopic = params.get('topic');
+const paramRandomize = params.get('randomize');
 let currentFlashcardIndex = 0;
 
 // Instant event listeners
@@ -34,30 +34,30 @@ document.getElementById('lastButton').addEventListener('click', () => {
 
 const indexButton = document.getElementById('index')
 indexButton.onclick = function() {
-    location.href = `../index.html?topic=${param_topic}`;
+    location.href = `../index.html?topic=${paramTopic}`;
 }
 
 // Async function to initialize the flashcards
-getAllData().then((retrieved_flashcards) => {
+getAllData().then((retrievedFlashcards) => {
     // preload all images
-    flashcards = retrieved_flashcards;
+    flashcards = retrievedFlashcards;
     for (const flashcard of flashcards) {
         preloadImage(flashcard.frontImage);
         preloadImage(flashcard.backImage);
     }
-    if (param_randomize === "true") {
+    if (paramRandomize === "true") {
         flashcards = flashcards.sort(() => Math.random() - 0.5);
     }
     displayFlashcard(currentFlashcardIndex);
 });
 
 async function getAllData() {
-    if (param_type !== "all") {
-        return await getDataForType(param_type);
+    if (paramType !== "all") {
+        return await getDataForType(paramType);
     }
     else {
         const languageData = await getStructure("./data/");
-        const sections = languageData[param_topic]["sections"];
+        const sections = languageData[paramTopic]["sections"];
         const fetchPromises = sections.map(section => {
             if (section !== "all") {
                 return getDataForType(section); // This returns a promise
@@ -79,10 +79,10 @@ async function getAllData() {
 async function getDataForType(type) {
     var fetch_url = "";
     if (IS_HOSTED_LOCALLY === true) {
-        fetch_url = `./data/${param_topic}/${type}.json`;
+        fetch_url = `./data/${paramTopic}/${type}.json`;
     }
     else {
-        fetch_url = `${GITHUB_FETCH_URL}${param_topic}/${type}.json`;
+        fetch_url = `${GITHUB_FETCH_URL}${paramTopic}/${type}.json`;
     }
     try {
         const response = await fetch(fetch_url);

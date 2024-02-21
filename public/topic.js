@@ -1,14 +1,14 @@
 import { getStructure } from "./config.mjs";
 var structureData = [];
-var should_randomize = false;
+var shouldRandomize = false;
 const params = new URLSearchParams(window.location.search);
-let param_topic = params.get('topic');
+let paramTopic = params.get('topic');
 
 function populateCategorySelection() {
     const selectElement = document.getElementById('topic-select');
 
-    if (!param_topic) {
-        param_topic = Object.keys(structureData)[0];
+    if (!paramTopic) {
+        paramTopic = Object.keys(structureData)[0];
     }
 
     for (var key in structureData){
@@ -18,7 +18,7 @@ function populateCategorySelection() {
         selectElement.appendChild(option);
       }
 
-    selectElement.value = param_topic; // Set the current language as selected
+    selectElement.value = paramTopic; // Set the current language as selected
 }
 
 function updateCategoryButtons() {
@@ -29,7 +29,7 @@ function updateCategoryButtons() {
     while (selectElement.firstChild) {
         selectElement.removeChild(selectElement.firstChild);
     }
-    const selectedTopic = structureData[param_topic];
+    const selectedTopic = structureData[paramTopic];
 
     if (selectedTopic) {
         selectedTopic.sections.forEach(section => {
@@ -43,7 +43,7 @@ function updateCategoryButtons() {
         // set start button
         const startButton = document.getElementById('start-button');
         startButton.onclick = function() {
-            location.href = `public/flashcard.html?type=${selectElement.value}&topic=${param_topic}&randomize=${should_randomize}`;
+            location.href = `public/flashcard.html?type=${selectElement.value}&topic=${paramTopic}&randomize=${shouldRandomize}`;
         };
         // if selectedTopic is empty, disable start button
         if (selectedTopic.sections.length == 0) {
@@ -51,7 +51,6 @@ function updateCategoryButtons() {
             document.querySelector('label[for="category-select"]').textContent = 'No content available';
             document.getElementById("category-select").hidden = true;
         }
-        console.log(selectedTopic.sections.length)
     }
     else {
     }
@@ -64,17 +63,17 @@ getStructure("./public/data/").then((data) => {
     updateCategoryButtons();
 
     document.getElementById('topic-select').addEventListener('change', function() {
-        param_topic = this.value;
+        paramTopic = this.value;
         updateCategoryButtons(); // Update buttons based on the newly selected language
     });
 });
 
 
 const randomizeCheckbox = document.getElementById('randomize-checkbox');
-should_randomize = randomizeCheckbox.checked;
+shouldRandomize = randomizeCheckbox.checked;
 // Add an event listener to the checkbox for the 'change' event
 randomizeCheckbox.addEventListener('change', function() {
     // Update is_randomize based on whether the checkbox is checked
-    should_randomize = this.checked;
-    console.log(should_randomize);
+    shouldRandomize = this.checked;
+    console.log(shouldRandomize);
 });
