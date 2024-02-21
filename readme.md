@@ -44,10 +44,14 @@ To add a new topic to the project, you need to modify the corresponding structur
 3. Create a new folder for the front sides of the cards [here](./public/assets/front/) Make sure to name the folder with the exact same name you have used in the `structure.json` file.
 
 ## Adding a new category
-1. Create a JSON [file]((./public/data/) with the name of the category. Ensure it is the same as the one that you have entered in `structure.json`.
+1. Create a JSON [file](./public/data/) with the name of the category. Ensure it is the same as the one that you have entered in `structure.json`.
 2. Populate the file (look at the Finnish examples).
 
 ## Adding New Flashcards
+**Use the new cli.py script:**
+1. Place the back.png and front.png images in the root folder
+2. Call the script with `python3 cli.py create --name example_name --topic example_topic --category example_category --style style_1 style_2 --content example_content`
+
 To add new flashcards to the project, you need to modify the corresponding JSON file and add images for the front and back of the flashcards. Here are the steps:
 
 1. Open the JSON file that corresponds to the category of flashcards you want to add to (e.g., adjectives.json for adjective flashcards).
@@ -55,7 +59,7 @@ To add new flashcards to the project, you need to modify the corresponding JSON 
 2. Add a new entry for your flashcard with the Finnish word, its English translation, and filenames for the front and back images.
 
 3. Place the front image in the `data/<language>/front` directory an the back image in the `data/<language>/back` directory.
-4. Ensure your images are correctly named to match the filenames specified in the JASON entry.
+4. Ensure your images are correctly named to match the filenames specified in the JSON entry.
 
 I have used chatGPT to generate the images.
 
