@@ -3,17 +3,20 @@
       {
         "frontImage": "assets/front/finnish/joka_1.jpg",
         "backImage": "assets/back/finnish/joka_1.jpg",
-        "frontContent": "Tyttö, [...] laulaa, on iloinen."
+        "frontContent": "Tyttö, [...] laulaa, on iloinen.",
+        "styles": ["eerie"]
       },
       {
         "frontImage": "assets/front/finnish/jotka_1.jpg",
         "backImage": "assets/back/finnish/jotka_1.jpg",
-        "frontContent": "Nuo miehet, [...] ovat vihaisia, ovat Ari ja Kari."
+        "frontContent": "Nuo miehet, [...] ovat vihaisia, ovat Ari ja Kari.",
+        "styles": ["eerie"]
       },
       {
         "frontImage": "assets/front/finnish/jota_1.jpg",
         "backImage": "assets/back/finnish/jota_1.jpg",
-        "frontContent": "Talvi, [...] me vihasimme, on ollut pitkä."
+        "frontContent": "Talvi, [...] me vihasimme, on ollut pitkä.",
+        "styles": ["eerie"]
       }
     ]
   }

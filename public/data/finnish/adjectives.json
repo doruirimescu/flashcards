@@ -4,7 +4,7 @@
         "frontImage": "assets/front/finnish/kohtelias.jpg",
         "backImage": "assets/back/finnish/kohtelias.jpg",
         "frontContent": "A polite knight opens the door for an elderly lady.",
-        "styles": ["eerie"]
+        "styles": ["eerie", "cute"]
       },
       {
         "frontImage": "assets/front/finnish/maaratietoinen.jpg",

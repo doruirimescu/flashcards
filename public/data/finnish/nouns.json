@@ -5,18 +5,14 @@
         "frontImage": "assets/front/finnish/hakki.jpg",
         "backImage": "assets/back/finnish/hakki.jpg",
         "frontContent": "A bird sits in a cage hanging from a tree's branch.",
-        "sentence": "",
-        "listContent": [
-        ]
+        "styles": ["eerie"]
       },
       {
         "title": "",
         "frontImage": "assets/front/finnish/kahva.jpg",
         "backImage": "assets/back/finnish/kahva.jpg",
         "frontContent": "The coffee cup's handle is hot.",
-        "sentence": "",
-        "listContent": [
-        ]
+        "styles": ["eerie"]
       }
     ]
   }

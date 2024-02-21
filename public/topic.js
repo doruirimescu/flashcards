@@ -98,6 +98,7 @@ function populateStyleSelection() {
         option.textContent = style;
         styleElement.appendChild(option);
     });
+    paramStyle = styles[0];
 }
 
 

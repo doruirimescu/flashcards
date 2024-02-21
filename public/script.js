@@ -6,6 +6,7 @@ const params = new URLSearchParams(window.location.search);
 const paramType = params.get('type'); // This will be 'verb' if the URL was flashcard.html?type=verb
 const paramTopic = params.get('topic');
 const paramRandomize = params.get('randomize');
+const paramStyle = params.get('style');
 let currentFlashcardIndex = 0;
 
 // Instant event listeners
@@ -41,12 +42,11 @@ indexButton.onclick = function() {
 getAllData().then((retrievedFlashcards) => {
     // preload all images
     flashcards = retrievedFlashcards;
-
-    // var style = ""
-    // for (const flashcard of flashcards) {
-    //     let modifiedPath = flashcard.frontImage.replace(/([^\/]+)(\.jpg)$/i, `${style}$1$2`);
-    //     console.log(modifiedPath);
-    // }
+    // filter out the flashcards that don't match the style
+    if (paramStyle !== "all") {
+        console.log("FILTERING FOR", paramStyle)
+        flashcards = flashcards.filter(flashcard => flashcard.styles.includes(paramStyle));
+    }
 
     for (const flashcard of flashcards) {
         preloadImage(flashcard.frontImage);
