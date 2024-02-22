@@ -2,6 +2,12 @@
     "english": {
         "total": 1,
         "categories": {
+            "all": {
+                "total": 1,
+                "styles": {
+                    "eerie": 1
+                }
+            },
             "phrases": {
                 "total": 1,
                 "styles": {
@@ -13,6 +19,12 @@
     "music": {
         "total": 8,
         "categories": {
+            "all": {
+                "total": 8,
+                "styles": {
+                    "eerie": 8
+                }
+            },
             "key-signatures": {
                 "total": 8,
                 "styles": {
@@ -24,6 +36,13 @@
     "finnish": {
         "total": 23,
         "categories": {
+            "all": {
+                "total": 23,
+                "styles": {
+                    "eerie": 22,
+                    "cute": 1
+                }
+            },
             "phrases": {
                 "total": 4,
                 "styles": {

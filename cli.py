@@ -183,7 +183,7 @@ def count_cards(_):
     topics_count_dict = dict()
     # for topic in topics, explore the names of the json files as categories
     for topic in topics:
-        topics_count_dict[topic] = {"total":0, "categories": {}}
+        topics_count_dict[topic] = {"total":0, "categories": {"all":{"total": 0, "styles": {}}}}
         categories = [f.name for f in os.scandir(f"{pm.data_dir}/{topic}") if f.is_file()]
         # remove the .json extension
         categories = [c.split(".")[0] for c in categories]
@@ -200,7 +200,8 @@ def count_cards(_):
                 topics_count_dict[topic]["categories"][category]["total"] += style_count
                 if style_count > 0:
                     topics_count_dict[topic]["categories"][category]["styles"][style] = style_count
-
+                    topics_count_dict[topic]["categories"]["all"]["styles"][style] = topics_count_dict[topic]["categories"]["all"]["styles"].get(style, 0) + style_count
+            topics_count_dict[topic]["categories"]["all"]["total"] = topics_count_dict[topic]["total"]
     print(topics_count_dict)
     # write the count to a json file
     with open(pm.count_json, 'w') as f:
