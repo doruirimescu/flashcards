@@ -1,5 +1,7 @@
-import { getStructure } from "./config.mjs";
+import { getStructure, getCount } from "./config.mjs";
 var structureData = [];
+
+var count = null;
 
 var paramTopic = null;
 var paramCategory = null;
@@ -27,6 +29,11 @@ function initializeContent()
 
     const startButton = document.getElementById('start-button');
     startButton.hidden = false;
+
+    const infoIcons = document.getElementsByClassName('info-icon');
+    for (const infoIcon of infoIcons) {
+        infoIcon.style.display = 'inline-block';
+    }
 }
 
 function noContent() {
@@ -41,6 +48,11 @@ function noContent() {
 
     document.querySelector('label[for="randomize-checkbox"]').hidden = true;
     document.getElementById("randomize-checkbox").hidden = true;
+
+    const infoIcons = document.getElementsByClassName('info-icon');
+    for (const infoIcon of infoIcons) {
+        infoIcon.style.display = 'none';
+    }
 }
 
 function populateTopicSelection() {
@@ -116,17 +128,24 @@ document.getElementById('topic-select').addEventListener('change', function() {
     initializeContent();
     populateCategorySelection();
     populateStyleSelection();
+    updateCount();
 });
 
 // whenever category is changed, update the style selection
 document.getElementById('category-select').addEventListener('change', function() {
     paramCategory = this.value;
     populateStyleSelection();
+    updateCount();
 });
 
 // whenever style is changed, update the style selection
 document.getElementById('style-select').addEventListener('change', function() {
     paramStyle = this.value;
+    updateCount();
+});
+
+getCount("./public/data/").then((data) => {
+    count = data;
 });
 
 getStructure("./public/data/").then((data) => {
@@ -135,8 +154,58 @@ getStructure("./public/data/").then((data) => {
     populateTopicSelection();
     populateCategorySelection();
     populateStyleSelection();
+    updateCount();
 });
 
+
+function updateCount(){
+    if (paramCategory === null) {
+        return;
+    }
+
+    const topic_selector = document.getElementById('topic-select');
+    for (var i = 0; i < topic_selector.length; i++) {
+        var cur_topic = topic_selector.options[i].value;
+        cur_topic = cur_topic.split(' ')[0];
+        try {
+            count[cur_topic]["total"];
+        }
+        catch (e) {
+            continue;
+        }
+        const total = count[cur_topic]["total"];
+        topic_selector.options[i].text = `${cur_topic} (${total})`;
+
+    }
+    // Get the current topic and category
+    const topic = document.getElementById('topic-select').value;
+    const category = document.getElementById('category-select').value;
+
+    var all_categories = Object.keys(count[topic]["categories"]);
+    const category_selector = document.getElementById('category-select');
+    for (const category of all_categories) {
+        const category_total = count[topic]["categories"][category]["total"];
+        for (var i = 0; i < category_selector.length; i++) {
+            if (category_selector.options[i].value === category) {
+                category_selector.options[i].text = `${category} (${category_total})`;
+                break;
+            }
+        }
+    }
+
+
+    var all_styles = Object.keys(count[topic]["categories"][category]["styles"]);
+    const style_selector = document.getElementById('style-select');
+    for (const style of all_styles) {
+        const style_total = count[topic]["categories"][category]["styles"][style];
+        for (var i = 0; i < style_selector.length; i++) {
+            if (style_selector.options[i].value === style) {
+                style_selector.options[i].text = `${style} (${style_total})`;
+                break;
+            }
+        }
+    }
+}
 
 const randomizeCheckbox = document.getElementById('randomize-checkbox');
 shouldRandomize = randomizeCheckbox.checked;
