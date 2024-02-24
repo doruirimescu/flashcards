@@ -154,6 +154,12 @@ getStructure("./public/data/").then((data) => {
     populateTopicSelection();
     populateCategorySelection();
     populateStyleSelection();
+    // wait for count to be loaded
+
+    while (count === null) {
+        setTimeout(() => {}, 10);
+    }
+
     updateCount();
 });
 
