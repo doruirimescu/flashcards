@@ -1,18 +1,30 @@
 {
     "flashcards": [
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/hakki.jpg",
-        "backImage": "assets/back/finnish/hakki.jpg",
-        "frontContent": "A bird sits in a cage hanging from a tree's branch.",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/kahva.jpg",
-        "backImage": "assets/back/finnish/kahva.jpg",
-        "frontContent": "The coffee cup's handle is hot.",
-        "styles": ["eerie"]
-      }
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/hakki.jpg",
+            "backImage": "assets/back/finnish/hakki.jpg",
+            "frontContent": "A bird sits in a cage hanging from a tree's branch.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/kahva.jpg",
+            "backImage": "assets/back/finnish/kahva.jpg",
+            "frontContent": "The coffee cup's handle is hot.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "frontImage": "assets/front/finnish/kommahdus.jpg",
+            "backImage": "assets/back/finnish/kommahdus.jpg",
+            "frontContent": "A small [mishap] during a job interview made me nervous.",
+            "styles": [
+                "cute"
+            ]
+        }
     ]
-  }
+}
