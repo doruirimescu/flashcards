@@ -1,32 +1,48 @@
 {
     "flashcards": [
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/pikku_hiljaa.jpg",
-        "backImage": "assets/back/finnish/pikku_hiljaa.jpg",
-        "frontContent": "Little by little, a seed grows into a large tree.",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/saada_tarpeekseen.jpg",
-        "backImage": "assets/back/finnish/saada_tarpeekseen.jpg",
-        "frontContent": "He had enough with the noise and moved to the countryside.",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/jaada_ansaan.jpg",
-        "backImage": "assets/back/finnish/jaada_ansaan.jpg",
-        "frontContent": "The mouse got trapped while searching for cheese.",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/valinnan_varaa.jpg",
-        "backImage": "assets/back/finnish/valinnan_varaa.jpg",
-        "frontContent": "The restaurant's menu offers a lot of choices.",
-        "styles": ["eerie"]
-      }
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/pikku_hiljaa.jpg",
+            "backImage": "assets/back/finnish/pikku_hiljaa.jpg",
+            "frontContent": "Little by little, a seed grows into a large tree.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/saada_tarpeekseen.jpg",
+            "backImage": "assets/back/finnish/saada_tarpeekseen.jpg",
+            "frontContent": "He had enough with the noise and moved to the countryside.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/jaada_ansaan.jpg",
+            "backImage": "assets/back/finnish/jaada_ansaan.jpg",
+            "frontContent": "The mouse got trapped while searching for cheese.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/valinnan_varaa.jpg",
+            "backImage": "assets/back/finnish/valinnan_varaa.jpg",
+            "frontContent": "The restaurant's menu offers a lot of choices.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "frontImage": "assets/front/finnish/pyoralla_paastani.jpg",
+            "backImage": "assets/back/finnish/pyoralla_paastani.jpg",
+            "frontContent": "When I heard the news, I was completely bewildered.",
+            "styles": [
+                "eerie"
+            ]
+        }
     ]
-  }
+}
