@@ -1,30 +1,44 @@
 {
     "flashcards": [
-      {
-        "frontImage": "assets/front/finnish/kohtelias.jpg",
-        "backImage": "assets/back/finnish/kohtelias.jpg",
-        "frontContent": "A polite knight opens the door for an elderly lady.",
-        "styles": ["cute"]
-      },
-      {
-        "frontImage": "assets/front/finnish/maaratietoinen.jpg",
-        "backImage": "assets/back/finnish/maaratietoinen.jpg",
-        "frontContent": "A determined dog follows tracks in the forest.",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/epatoivoinen.jpg",
-        "backImage": "assets/back/finnish/epatoivoinen.jpg",
-        "frontContent": "Desperate.",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/keskenerainen.jpg",
-        "backImage": "assets/back/finnish/keskenerainen.jpg",
-        "frontContent": "The artist's studio has many unfinished paintings.",
-        "styles": ["eerie"]
-      }
+        {
+            "frontImage": "assets/front/finnish/kohtelias.jpg",
+            "backImage": "assets/back/finnish/kohtelias.jpg",
+            "frontContent": "A polite knight opens the door for an elderly lady.",
+            "styles": [
+                "cute"
+            ]
+        },
+        {
+            "frontImage": "assets/front/finnish/maaratietoinen.jpg",
+            "backImage": "assets/back/finnish/maaratietoinen.jpg",
+            "frontContent": "A determined dog follows tracks in the forest.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "frontImage": "assets/front/finnish/epatoivoinen.jpg",
+            "backImage": "assets/back/finnish/epatoivoinen.jpg",
+            "frontContent": "Desperate.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "frontImage": "assets/front/finnish/keskenerainen.jpg",
+            "backImage": "assets/back/finnish/keskenerainen.jpg",
+            "frontContent": "The artist's studio has many unfinished paintings.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "frontImage": "assets/front/finnish/yksityiskohtainen.jpg",
+            "backImage": "assets/back/finnish/yksityiskohtainen.jpg",
+            "frontContent": "The report was very [informative].",
+            "styles": [
+                "eerie"
+            ]
+        }
     ]
-  }
+}

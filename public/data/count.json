@@ -34,12 +34,12 @@
         }
     },
     "finnish": {
-        "total": 26,
+        "total": 27,
         "categories": {
             "all": {
-                "total": 26,
+                "total": 27,
                 "styles": {
-                    "eerie": 23,
+                    "eerie": 24,
                     "cute": 3
                 }
             },
@@ -51,9 +51,9 @@
                 }
             },
             "adjectives": {
-                "total": 4,
+                "total": 5,
                 "styles": {
-                    "eerie": 3,
+                    "eerie": 4,
                     "cute": 1
                 }
             },
