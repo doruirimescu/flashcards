@@ -116,7 +116,6 @@ class CreateEntry:
             structure_data[self.topic]["sections"][self.category].append(self.style)
         if self.style not in structure_data[self.topic]["sections"]["all"]:
             structure_data[self.topic]["sections"]["all"].append(self.style)
-        current_styles = structure_data[self.topic]["sections"][self.category]
 
         with open(self.path.structure_json, 'w') as f:
             json.dump(structure_data, f, indent=4)
@@ -154,7 +153,8 @@ class CardsCounter:
         for card in category_data['flashcards']:
             if self.style in card['styles']:
                 style_count += 1
-        return style_count
+        category_count = len(category_data['flashcards'])
+        return (style_count, category_count)
 
 class DeleteCard:
     def __init__(self, name, topic, category):
@@ -191,16 +191,20 @@ def count_cards(_):
         for category in categories:
             total_count[topic][category] = dict()
             topics_count_dict[topic]["categories"][category] = {"total":0, "styles": {}}
+
+            category_counter = CardsCounter(topic, category, "all")
+            category_count = category_counter.count()[1]
+            topics_count_dict[topic]["categories"][category]["total"] = category_count
+            topics_count_dict[topic]["total"] += category_count
+            topics_count_dict[topic]["categories"]["all"]["total"] += category_count
+
             for style in pm.get_structure_json()[topic]["sections"]["all"]:
                 counter = CardsCounter(topic, category, style)
-                style_count = counter.count()
-                topics_count_dict[topic]["total"] += style_count
-                topics_count_dict[topic]["categories"][category]["total"] += style_count
+                style_count, category_count = counter.count()
                 if style_count > 0:
                     topics_count_dict[topic]["categories"][category]["styles"][style] = style_count
                     topics_count_dict[topic]["categories"]["all"]["styles"][style] = topics_count_dict[topic]["categories"]["all"]["styles"].get(style, 0) + style_count
-            topics_count_dict[topic]["categories"]["all"]["total"] = topics_count_dict[topic]["total"]
-    print(topics_count_dict)
+
     # write the count to a json file
     with open(pm.count_json, 'w') as f:
         json.dump(topics_count_dict, f, indent=4)
