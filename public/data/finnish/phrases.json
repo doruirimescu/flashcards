@@ -43,6 +43,14 @@
             "styles": [
                 "eerie"
             ]
+        },
+        {
+            "frontImage": "assets/front/finnish/paasta_palkahasta.jpg",
+            "backImage": "assets/back/finnish/paasta_palkahasta.jpg",
+            "frontContent": "He [got off the hook] by explaining the situation.",
+            "styles": [
+                "cute"
+            ]
         }
     ]
 }

@@ -34,30 +34,31 @@
         }
     },
     "finnish": {
-        "total": 25,
+        "total": 29,
         "categories": {
             "all": {
-                "total": 25,
+                "total": 29,
                 "styles": {
                     "eerie": 23,
-                    "cute": 2
+                    "cute": 6
                 }
             },
             "phrases": {
-                "total": 5,
+                "total": 7,
                 "styles": {
-                    "eerie": 5
+                    "eerie": 5,
+                    "cute": 1
                 }
             },
             "adjectives": {
-                "total": 5,
+                "total": 6,
                 "styles": {
                     "eerie": 4,
                     "cute": 1
                 }
             },
             "nouns": {
-                "total": 3,
+                "total": 4,
                 "styles": {
                     "eerie": 2,
                     "cute": 1

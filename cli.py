@@ -112,15 +112,11 @@ class CreateEntry:
             structure_data[self.topic] = {"sections": {"all": []}}
         if self.category not in structure_data[self.topic]["sections"]:
             structure_data[self.topic]["sections"][self.category] = []
+        if self.style not in structure_data[self.topic]["sections"][self.category]:
+            structure_data[self.topic]["sections"][self.category].append(self.style)
+        if self.style not in structure_data[self.topic]["sections"]["all"]:
+            structure_data[self.topic]["sections"]["all"].append(self.style)
         current_styles = structure_data[self.topic]["sections"][self.category]
-
-        # append only new styles
-        new_styles = []
-        for style in self.style:
-            if style not in current_styles:
-                current_styles.append(style)
-                new_styles.append(style)
-        structure_data[self.topic]["sections"]["all"].extend(new_styles)
 
         with open(self.path.structure_json, 'w') as f:
             json.dump(structure_data, f, indent=4)
