@@ -58,6 +58,8 @@ class CreateEntry:
         subprocess.run(["mv", "front.jpg", self.path.front_image])
         subprocess.run(["mv", "back.jpg", self.path.back_image])
 
+        count_cards(None)
+
     def _check_images_exist(self):
         # check that back and front images exist at the current directory
         if not os.path.exists("back.png"):
