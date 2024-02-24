@@ -157,7 +157,7 @@ getStructure("./public/data/").then((data) => {
     // wait for count to be loaded
 
     while (count === null) {
-        setTimeout(() => {}, 10);
+        setTimeout(() => {}, 100);
     }
 
     updateCount();
