@@ -1,67 +1,93 @@
 {
     "flashcards": [
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/sulaa.jpg",
-        "backImage": "assets/back/finnish/sulaa.jpg",
-        "frontContent": "The snow melts when the sun is shining",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/sulattaa.jpg",
-        "backImage": "assets/back/finnish/sulattaa.jpg",
-        "frontContent": "The sun melts the snow",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/pyorittaa.jpg",
-        "backImage": "assets/back/finnish/pyorittaa.jpg",
-        "frontContent": "When a child rolls a snowball, it grows big",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/hiertaa.jpg",
-        "backImage": "assets/back/finnish/hiertaa.jpg",
-        "frontContent": "The shoe is chafing me",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/vaitella.jpg",
-        "backImage": "assets/back/finnish/vaitella.jpg",
-        "frontContent": "Two characters argue about the meaning of life.",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/venyttaa.jpg",
-        "backImage": "assets/back/finnish/venyttaa.jpg",
-        "frontContent": "She stretches a rubber band carefully.",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/venya.jpg",
-        "backImage": "assets/back/finnish/venya.jpg",
-        "frontContent": "The rubber band stretches when it is stretched.",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/kamppailla2.jpg",
-        "backImage": "assets/back/finnish/kamppailla.jpg",
-        "frontContent": "Two bears struggle/fight for food in the forest.",
-        "styles": ["eerie"]
-      },
-      {
-        "title": "",
-        "frontImage": "assets/front/finnish/hahmottaa.jpg",
-        "backImage": "assets/back/finnish/hahmottaa.jpg",
-        "frontContent": "The map reader figures out the route while adventuring in the mountains.",
-        "styles": ["eerie"]
-      }
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/sulaa.jpg",
+            "backImage": "assets/back/finnish/sulaa.jpg",
+            "frontContent": "The snow melts when the sun is shining",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/sulattaa.jpg",
+            "backImage": "assets/back/finnish/sulattaa.jpg",
+            "frontContent": "The sun melts the snow",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/pyorittaa.jpg",
+            "backImage": "assets/back/finnish/pyorittaa.jpg",
+            "frontContent": "When a child rolls a snowball, it grows big",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/hiertaa.jpg",
+            "backImage": "assets/back/finnish/hiertaa.jpg",
+            "frontContent": "The shoe is chafing me",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/vaitella.jpg",
+            "backImage": "assets/back/finnish/vaitella.jpg",
+            "frontContent": "Two characters argue about the meaning of life.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/venyttaa.jpg",
+            "backImage": "assets/back/finnish/venyttaa.jpg",
+            "frontContent": "She stretches a rubber band carefully.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/venya.jpg",
+            "backImage": "assets/back/finnish/venya.jpg",
+            "frontContent": "The rubber band stretches when it is stretched.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/kamppailla2.jpg",
+            "backImage": "assets/back/finnish/kamppailla.jpg",
+            "frontContent": "Two bears struggle/fight for food in the forest.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "title": "",
+            "frontImage": "assets/front/finnish/hahmottaa.jpg",
+            "backImage": "assets/back/finnish/hahmottaa.jpg",
+            "frontContent": "The map reader figures out the route while adventuring in the mountains.",
+            "styles": [
+                "eerie"
+            ]
+        },
+        {
+            "frontImage": "assets/front/finnish/luokitella.jpg",
+            "backImage": "assets/back/finnish/luokitella.jpg",
+            "frontContent": "We can [classify] these plants based on their characteristics.",
+            "styles": [
+                "eerie"
+            ]
+        }
     ]
-  }
+}
