@@ -12,6 +12,21 @@ const ELEMENT_TOPIC_LABEL = document.querySelector('label[for="topic-select"]');
 const ELEMENT_CATEGORY_LABEL = document.querySelector('label[for="category-select"]');
 const ELEMENT_STYLE_LABEL = document.querySelector('label[for="style-select"]');
 
+async function init(){
+    await fetchData();
+    initializeContent();
+    populateTopicSelection();
+    populateCategorySelection();
+    populateStyleSelection();
+    updateCount();
+
+}
+
+async function fetchData() {
+    // Use async/await to wait for the data to be fetched before proceeding
+    count = await getCount("./public/data/");
+    structureData = await getStructure("./public/data/");
+}
 
 function initializeContent()
 {
@@ -150,25 +165,6 @@ document.getElementById('style-select').addEventListener('change', function() {
     updateCount();
 });
 
-getCount("./public/data/").then((data) => {
-    count = data;
-});
-
-getStructure("./public/data/").then((data) => {
-    structureData = data;
-    initializeContent();
-    populateTopicSelection();
-    populateCategorySelection();
-    populateStyleSelection();
-    // wait for count to be loaded
-
-    while (count === null) {
-        setTimeout(() => {}, 100);
-    }
-
-    updateCount();
-});
-
 
 function updateCount(){
     if (paramCategory === null) {
@@ -232,4 +228,4 @@ document.getElementById('start-button').onclick = function() {
     location.href = `public/flashcard.html?type=${paramCategory}&topic=${paramTopic}&randomize=${shouldRandomize}&style=${paramStyle}`;
 };
 
-initializeContent();
+init();
