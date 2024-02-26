@@ -51,6 +51,12 @@
             "styles": [
                 "cute"
             ]
+        },
+        {
+            "frontImage": "assets/front/finnish/tyhjasta.jpg",
+            "backImage": "assets/back/finnish/tyhjasta.jpg",
+            "frontContent": "The magician pullsed a rabbit from the hat [as if out of nowhere].",
+            "styles": "cute"
         }
     ]
 }

@@ -231,7 +231,7 @@ def parse_args():
     create_parser.add_argument('--name', type=str, required=True, help='Name of the flashcard entry')
     create_parser.add_argument('--topic', type=str, required=True, help='Topic of the flashcard')
     create_parser.add_argument('--category', type=str, required=True, help='Category of the flashcard')
-    create_parser.add_argument('--style', nargs='+', help='List of styles for the flashcard')
+    create_parser.add_argument('--style', type=str, help='Style of the flashcard')
     create_parser.add_argument('--content', type=str, required=True, help='Content of the flashcard')
     create_parser.set_defaults(func=create_entry)
 
