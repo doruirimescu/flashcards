@@ -118,6 +118,12 @@ function populateStyleSelection() {
         option.textContent = style;
         styleElement.appendChild(option);
     });
+    // create selection for "all"
+    const option = document.createElement('option');
+    option.value = "all";
+    option.textContent = "all";
+    styleElement.appendChild(option);
+
     paramStyle = styles[0];
 }
 
