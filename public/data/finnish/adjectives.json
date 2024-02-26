@@ -3,7 +3,7 @@
         {
             "frontImage": "assets/front/finnish/kohtelias.jpg",
             "backImage": "assets/back/finnish/kohtelias.jpg",
-            "frontContent": "A polite knight opens the door for an elderly lady.",
+            "frontContent": "A [polite] knight opens the door for an elderly lady.",
             "styles": [
                 "cute"
             ]
@@ -11,7 +11,7 @@
         {
             "frontImage": "assets/front/finnish/maaratietoinen.jpg",
             "backImage": "assets/back/finnish/maaratietoinen.jpg",
-            "frontContent": "A determined dog follows tracks in the forest.",
+            "frontContent": "A [determined] dog follows tracks in the forest.",
             "styles": [
                 "eerie"
             ]
@@ -19,7 +19,7 @@
         {
             "frontImage": "assets/front/finnish/epatoivoinen.jpg",
             "backImage": "assets/back/finnish/epatoivoinen.jpg",
-            "frontContent": "Desperate.",
+            "frontContent": "[Desperate]",
             "styles": [
                 "eerie"
             ]
@@ -27,7 +27,7 @@
         {
             "frontImage": "assets/front/finnish/keskenerainen.jpg",
             "backImage": "assets/back/finnish/keskenerainen.jpg",
-            "frontContent": "The artist's studio has many unfinished paintings.",
+            "frontContent": "The artist's studio has many [unfinished] paintings.",
             "styles": [
                 "eerie"
             ]

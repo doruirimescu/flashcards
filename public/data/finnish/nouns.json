@@ -4,7 +4,7 @@
             "title": "",
             "frontImage": "assets/front/finnish/hakki.jpg",
             "backImage": "assets/back/finnish/hakki.jpg",
-            "frontContent": "A bird sits in a cage hanging from a tree's branch.",
+            "frontContent": "A bird sits in a [cage] hanging from a tree's branch.",
             "styles": [
                 "eerie"
             ]
@@ -13,7 +13,7 @@
             "title": "",
             "frontImage": "assets/front/finnish/kahva.jpg",
             "backImage": "assets/back/finnish/kahva.jpg",
-            "frontContent": "The coffee cup's handle is hot.",
+            "frontContent": "The coffee cup's [handle] is hot.",
             "styles": [
                 "eerie"
             ]
