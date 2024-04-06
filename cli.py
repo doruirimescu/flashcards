@@ -96,7 +96,7 @@ class CreateEntry:
             "frontImage": front_image_str,
             "backImage": back_image_str,
             "frontContent": self.content,
-            "styles": self.style
+            "styles": [self.style]
         })
 
         # write json object to json_file
@@ -270,3 +270,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# python3 cli.py create --name entailla --topic finnish --category verbs --style eerie --content "The sky suggests rain for tomorrow."
