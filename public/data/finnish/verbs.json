@@ -88,6 +88,14 @@
             "styles": [
                 "eerie"
             ]
+        },
+        {
+            "frontImage": "assets/front/finnish/entailla.jpg",
+            "backImage": "assets/back/finnish/entailla.jpg",
+            "frontContent": "The sky suggests rain for tomorrow.",
+            "styles": [
+                "eerie"
+            ]
         }
     ]
 }
