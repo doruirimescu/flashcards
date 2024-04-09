@@ -40,16 +40,6 @@ python3 -m http.server 8001
 4. Open your web browser and go to `http://localhost:8001` to view the project.
 
 
-## Adding New Topic
-To add a new topic to the project, you need to modify the corresponding structure JSON file and create two folders:
-1. Add your topic and sections in `structure.json` [file](./public/data/structure.json). Familiarize yourself with the contents of this file.
-2. Create a new folder for the back sides of the cards [here](./public/assets/back/). Make sure to name the folder with the exact same name you have used in the `structure.json` file.
-3. Create a new folder for the front sides of the cards [here](./public/assets/front/) Make sure to name the folder with the exact same name you have used in the `structure.json` file.
-
-## Adding a new category
-1. Create a JSON [file](./public/data/) with the name of the category. Ensure it is the same as the one that you have entered in `structure.json`.
-2. Populate the file (look at the Finnish examples).
-
 ## Adding New Flashcards
 **Use the new cli.py script:**
 1. Generate the back and the front of the flashcard. 1024 x 1024 pixels is recommended.
@@ -79,7 +69,6 @@ By following these instructions and considering future enhancements, you can eff
 
 ### System prompt
 You are a flashcard illustrator. The flashcards that you are going to illustrate follow the "Don't starve" game's graphic design.
-
 
 Creating flashcards with a graphic design inspired by the game "Don't Starve" sounds like a fascinating project! "Don't Starve" is known for its unique, dark, and somewhat gothic hand-drawn art style, featuring quirky characters, eerie environments, and a wide range of fantastical creatures and items. This distinctive style uses strong outlines, limited palettes, and textures that give a sense of depth and tactile feel to the visuals.
 
