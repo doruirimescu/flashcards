@@ -5,6 +5,9 @@
 
 Welcome to the Flashcards Learning Project! This tool was originally designed to help language learners improve their vocabulary through interactive flashcards. I found other applications as well, such as learning music theory or engineering concepts. Below, you'll find instructions on how to run the project locally for development, deploy it using GitHub Pages, add new flashcards, and suggestions for future improvements.
 
+**IMPORTANT! This is a static site, hosted on github pages for free. In order to add new flashcards,
+you will need to run a python script (cli.py) locally, and then either merge your change to this repo, or fork this repo and host it on your own github pages**
+
 **IMPORTANT! I have currently developed only the [Finnish](https://doruirimescu.github.io/language-flashcards/public/flashcard.html?type=all&topic=finnish) language flashcards.**
 
 ## How to Run the Project
@@ -49,29 +52,23 @@ To add a new topic to the project, you need to modify the corresponding structur
 
 ## Adding New Flashcards
 **Use the new cli.py script:**
-1. Place the back.png and front.png images in the root folder
-2. Call the script with `python3 cli.py create --name example_name --topic example_topic --category example_category --style style_1 style_2 --content example_content`
-
-To add new flashcards to the project, you need to modify the corresponding JSON file and add images for the front and back of the flashcards. Here are the steps:
-
-1. Open the JSON file that corresponds to the category of flashcards you want to add to (e.g., adjectives.json for adjective flashcards).
-
-2. Add a new entry for your flashcard with the Finnish word, its English translation, and filenames for the front and back images.
-
-3. Place the front image in the `data/<language>/front` directory an the back image in the `data/<language>/back` directory.
-4. Ensure your images are correctly named to match the filenames specified in the JSON entry.
-
-I have used chatGPT to generate the images.
-
+1. Generate the back and the front of the flashcard. 1024 x 1024 pixels is recommended.
+2. Place the back.png and front.png images in the root folder
+3. Think of a good card name. This should illustrate the main concept the card is trying to teach
+4. Think of a good topic. Look first through the existing topics.
+5. Think of a good category. Look first through the existing categories.
+6. Think of the content of the card. This is the part that will be illustrated on top of it.
+7. Call the script with `python3 cli.py create --name card_name --topic for_example_finnish --category for_example_adjectives --style style_1 style_2 --content example_content`
+8. Call the count script to update the count. `python3 cli.py count`
 
 ## Future Improvements
 This project has great potential for expansion and improvement. But I am lacking the time to contribute more. Here are a few suggestions:
 
-* Responsive Design for Different Devices: Improving the project's responsiveness would ensure that it's easily accessible on various devices, including smartphones, tablets, and desktop computers.
-
 * Interactive Learning Features: Incorporating interactive features such as quizzes, spaced repetition, and pronunciation guides could enhance the learning experience.
 
 * Community Contributions: Allowing users to contribute their own flashcards can enrich the content and engage the community.
+
+* Move it to its own server if it gains big traction.
 
 By following these instructions and considering future enhancements, you can effectively use and contribute to the Finnish Language Flashcards Project. Happy learning!
 
