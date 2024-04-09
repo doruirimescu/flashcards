@@ -1,3 +1,3 @@
 #!/bin/bash
 
-find . -type f -name '*.png' -exec mogrify -format jpg {} \; -exec rm {} \;
+find . -maxdepth 1 -type f -name '*.png' -exec mogrify -format jpg {} \; -exec rm {} \;
