@@ -8,7 +8,7 @@ Welcome to the Flashcards Learning Project! This tool was originally designed to
 **IMPORTANT! This is a static site, hosted on github pages for free. In order to add new flashcards,
 you will need to run a python script (cli.py) locally, and then either merge your change to this repo, or fork this repo and host it on your own github pages**
 
-**IMPORTANT! I have currently developed only the [Finnish](https://doruirimescu.github.io/language-flashcards/public/flashcard.html?type=all&topic=finnish) language flashcards.**
+**IMPORTANT! I have currently developed only the [Finnish](https://doruirimescu.github.io/flashcards/public/flashcard.html?type=adjectives&topic=finnish&randomize=true&style=eerie) language flashcards.**
 
 ## How to Run the Project
 
@@ -18,7 +18,7 @@ You have three options to run this project:
 
 
 ### Accessing the Current Version Hosted on GitHub Pages
-To access the live version of this project, simply click on the following [link](https://doruirimescu.github.io/language-flashcards/index.html).
+To access the live version of this project, simply click on the following [link](https://doruirimescu.github.io/flashcards/index.html).
 
 To host your own version:
 * Fork this project.
