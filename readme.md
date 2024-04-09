@@ -43,8 +43,8 @@ python3 -m http.server 8001
 ## Adding New Flashcards
 **Use the new cli.py script:**
 1. Generate the back and the front of the flashcard. 1024 x 1024 pixels is recommended.
-2. Place the back.png and front.png images in the root folder
-3. Think of a good card name. This should illustrate the main concept the card is trying to teach
+2. Place the back.png and front.png images in the root folder (at the same level with this file).
+3. Think of a good card name. This should illustrate the main concept the card is trying to teach.
 4. Think of a good topic. Look first through the existing topics.
 5. Think of a good category. Look first through the existing categories.
 6. Think of the content of the card. This is the part that will be illustrated on top of it.
