@@ -4,7 +4,8 @@
         "sections": {
             "adjectives": [
                 "eerie",
-                "cute"
+                "cute",
+                "comic"
             ],
             "nouns": [
                 "eerie",
@@ -22,7 +23,8 @@
             ],
             "all": [
                 "eerie",
-                "cute"
+                "cute",
+                "comic"
             ]
         }
     },

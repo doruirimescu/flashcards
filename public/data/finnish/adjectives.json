@@ -39,6 +39,15 @@
             "styles": [
                 "eerie"
             ]
+        },
+        {
+            "frontImage": "assets/front/finnish/pitaamaton.jpg",
+            "backImage": "assets/back/finnish/pitaamaton.jpg",
+            "frontContent": "He/she continued working regardless of the rain.",
+            "styles": [
+                "eerie",
+                "comic"
+            ]
         }
     ]
 }
