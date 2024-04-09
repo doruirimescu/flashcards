@@ -207,7 +207,6 @@ def count_cards(_):
                     topics_count_dict[topic]["categories"][category]["styles"][style] = style_count
                     topics_count_dict[topic]["categories"]["all"]["styles"][style] = topics_count_dict[topic]["categories"]["all"]["styles"].get(style, 0) + style_count
 
-    # write the count to a json file
     with open(pm.count_json, 'w') as f:
         json.dump(topics_count_dict, f, indent=4)
 
