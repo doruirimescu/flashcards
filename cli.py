@@ -5,6 +5,7 @@ import os
 import subprocess
 import sys
 from pathlib import Path
+from typing import List
 
 class PathManager:
     def __init__(self, topic, name, category):
@@ -24,7 +25,7 @@ class PathManager:
         with open(self.structure_json, 'r') as f:
             return json.load(f)
 class CreateEntry:
-    def __init__(self, name, topic, category, style, content):
+    def __init__(self, name: str, topic: str, category: str, style: List[str], content: str):
         self.name = name
         self.topic = topic
         self.category = category
@@ -96,7 +97,7 @@ class CreateEntry:
             "frontImage": front_image_str,
             "backImage": back_image_str,
             "frontContent": self.content,
-            "styles": [self.style]
+            "styles": self.style
         })
 
         # write json object to json_file
@@ -110,10 +111,13 @@ class CreateEntry:
             structure_data[self.topic] = {"sections": {"all": []}}
         if self.category not in structure_data[self.topic]["sections"]:
             structure_data[self.topic]["sections"][self.category] = []
-        if self.style not in structure_data[self.topic]["sections"][self.category]:
-            structure_data[self.topic]["sections"][self.category].append(self.style)
-        if self.style not in structure_data[self.topic]["sections"]["all"]:
-            structure_data[self.topic]["sections"]["all"].append(self.style)
+
+        for style in self.style:
+            if style not in structure_data[self.topic]["sections"][self.category]:
+                print(f"Style {style} not in {structure_data[self.topic]['sections'][self.category]}")
+                structure_data[self.topic]["sections"][self.category].append(style)
+            if style not in structure_data[self.topic]["sections"]["all"]:
+                structure_data[self.topic]["sections"]["all"].append(style)
 
         with open(self.path.structure_json, 'w') as f:
             json.dump(structure_data, f, indent=4)
@@ -231,7 +235,7 @@ def parse_args():
     create_parser.add_argument('--name', type=str, required=True, help='Name of the flashcard entry')
     create_parser.add_argument('--topic', type=str, required=True, help='Topic of the flashcard')
     create_parser.add_argument('--category', type=str, required=True, help='Category of the flashcard')
-    create_parser.add_argument('--style', type=str, help='Style of the flashcard')
+    create_parser.add_argument('--style', type=str, nargs='+', help='Style of the flashcard')
     create_parser.add_argument('--content', type=str, required=True, help='Content of the flashcard')
     create_parser.set_defaults(func=create_entry)
 
